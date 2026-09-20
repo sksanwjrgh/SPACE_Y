@@ -28,14 +28,9 @@ ROS2 Humble + PX4 SITL + Gazebo Harmonic 환경 기준입니다.
    print(cv2.getBuildInformation())
    ```
    ✅ `GStreamer: YES` 확인 필수
-8. **gazebo Harmonic 설치, ros-gz-bridge 설치 (from source)**  
-   가제보 하모닉은 PX4 설치(3번)시 같이 설치됨
-   ```bash
-   $ sudo apt install ros-humble-ros-gzharmonic
-   ```
-9. **px4_msgs workspace 설치 및 빌드**  
+8. **px4_msgs workspace 설치 및 빌드**  
    🔗 개발환경 구축방법 <3-5. px4_msgs workspace 구축하기> 참조
-10. **LiDAR 및 ArUco 마커 기반 정밀 착륙 시뮬레이션 문서(v1.0.1)** 참고하여 자동착륙 모듈 실행
+9. **LiDAR 및 ArUco 마커 기반 정밀 착륙 시뮬레이션 문서(v1.0.1)** 참고하여 자동착륙 모듈 실행
 
 > 💡 **필요한 워크스페이스 3개**
 > - `px4_ros_ws`
