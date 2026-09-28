@@ -23,7 +23,16 @@ ament_target_dependencies(landing_test_vel rclcpp px4_msgs geometry_msgs)
 target_include_directories(landing_test_vel PUBLIC ${EIGEN3_INCLUDE_DIRS})
 
 ament_target_dependencies(landing_test_flight rclcpp px4_msgs geometry_msgs)
-target_include_directories(landing_test_flight PUBLIC ${EIGEN3_INCLUDE_DIRS})
+target_include_directories(landing_test_flight PUBLIC include ${EIGEN3_INCLUDE_DIRS})
+
+target_include_directories(landing_test PUBLIC include)
+target_include_directories(landing_test_vel PUBLIC include)
+
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  ament_add_gtest(test_landing_controller test/test_landing_controller.cpp)
+  target_include_directories(test_landing_controller PUBLIC include ${EIGEN3_INCLUDE_DIRS})
+endif()
 
 install(TARGETS
   landing_test

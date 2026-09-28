@@ -17,6 +17,8 @@ from rclpy.node import Node
 from px4_msgs.msg import VehicleOdometry
 from sensor_msgs.msg import PointCloud2
 
+from imagery_processing.vision_geometry import VisionGeometry
+
 def build_gst_pipeline(width: int, height: int, fps: int, flip_method: int = 0) -> str:
     return (
         f"nvarguscamerasrc sensor-id=0 ! "
@@ -61,13 +63,19 @@ class MarkerRecognition(Node):
         self.declare_parameter("show_window", True)
         self.declare_parameter("use_filter", True)
         self.declare_parameter("lidar_alpha", 0.3)
-        self.declare_parameter("world","aruco_windy")
-        self.declare_parameter("lidar_altitude",0.17) # lidar와 지면 사이의 거리 (빼야하는 값)
-        self.x_m=0.
-        self.y_m=0.
+        self.declare_parameter("world", "aruco")
+        self.declare_parameter("lidar_altitude", 0.17) # lidar와 지면 사이의 거리 (빼야하는 값)
+        self.declare_parameter("camera_fx", 540.0)
+        self.declare_parameter("camera_fy", 540.0)
+        self.declare_parameter("camera_cx", 640.0)
+        self.declare_parameter("camera_cy", 480.0)
+        self.declare_parameter("target_timeout_sec", 0.3)
+        self.declare_parameter("min_altitude", 0.1)
+        self.x_m = float("nan")
+        self.y_m = float("nan")
 
         # 파라미터 값 읽기
-        if int(self.get_parameter("camera_source").value) == 1:
+        if str(self.get_parameter("camera_source").value) == "1":
             src_param = (
     'udpsrc port=5600 caps="application/x-rtp,media=video,encoding-name=H264,'
     'payload=96,clock-rate=90000" ! '
@@ -92,7 +100,16 @@ class MarkerRecognition(Node):
         self._use_filter = bool(self.get_parameter("use_filter").value)
         self._alpha = float(self.get_parameter("lidar_alpha").value)
         self._lidar_altitude = float(self.get_parameter("lidar_altitude").value)
-        world_=str(self.get_parameter("world").value)
+        world_ = str(self.get_parameter("world").value)
+        fx = float(self.get_parameter("camera_fx").value)
+        fy = float(self.get_parameter("camera_fy").value)
+        cx = float(self.get_parameter("camera_cx").value)
+        cy = float(self.get_parameter("camera_cy").value)
+        timeout_sec = float(self.get_parameter("target_timeout_sec").value)
+        min_alt = float(self.get_parameter("min_altitude").value)
+        self.geom = VisionGeometry(
+            fx=fx, fy=fy, cx=cx, cy=cy, min_altitude=min_alt, timeout_sec=timeout_sec
+        )
 
         self._filtered_z: Optional[float] = None
         mission_mode = "flight"
@@ -187,12 +204,15 @@ class MarkerRecognition(Node):
         self._have_attitude = True
 
 
-    def _lidar_cb(self, msg: PointCloud2) ->None:
-        #self.get_logger().info("Lidar data called")
+    def _lidar_cb(self, msg: PointCloud2) -> None:
+        if len(msg.data) < 4:
+            return
         raw = bytes(msg.data)
         first_four = raw[0:4]
-        self._altitude = struct.unpack('<f', first_four)[0]*np.cos(self._pitch)*np.cos(self._roll) - self._lidar_altitude
-        self.get_logger().info(f"calculated altitude: {self._altitude:.04f}")
+        val = struct.unpack('<f', first_four)[0]
+        if not math.isfinite(val) or val <= 0:
+            return
+        self._altitude = val * np.cos(self._pitch) * np.cos(self._roll) - self._lidar_altitude
 
     # 카메라 프레임 처리
     def _camera_timer_cb(self) -> None:
@@ -201,24 +221,15 @@ class MarkerRecognition(Node):
             self.get_logger().error("Frame capture failed")
             return
 
+        now_sec = self.get_clock().now().nanoseconds / 1e9
         tag_centre = self._detect_first_tag(frame)
         if tag_centre is not None:
             cx, cy = tag_centre
-
-            # ★ 픽셀 → 미터 변환 (카메라 내부 파라미터 사용)
-            fx = self._CAMERA_MATRIX[0, 0]
-            fy = self._CAMERA_MATRIX[1, 1]
-
-            height, width = frame.shape[:2]
-            cx0 = width/2
-            cy0 = height/2
-
-            dx = cx - cx0
-            dy = cy0 - cy
-
-            # self._latest_z는 보정된 카메라 높이(수직 z). 카메라 optical axis와 정렬 가정. # obsolete comment
-            self.x_m = dx/500
-            self.y_m = dy/500
+            x_ground, y_ground = self.geom.project_to_ground(
+                cx, cy, self._altitude, roll=self._roll, pitch=self._pitch
+            )
+            if x_ground is not None and y_ground is not None:
+                self.geom.update_detection(x_ground, y_ground, now_sec)
 
             if self._publish_debug:
                 cv2.drawMarker(
@@ -229,24 +240,26 @@ class MarkerRecognition(Node):
                     markerSize=20,
                     thickness=2,
                 )
+                height, width = frame.shape[:2]
                 cv2.drawMarker(
                     frame,
-                    (int(cx0), int(cy0)),
+                    (int(width / 2), int(height / 2)),
                     (255, 0, 0),
                     markerType=cv2.MARKER_CROSS,
                     markerSize=10,
                     thickness=1,
                 )
 
-            
-
+        target_x, target_y = self.geom.get_target_coordinates(now_sec)
+        self.x_m = target_x
+        self.y_m = target_y
 
         msg = PointStamped()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = self._frame_id
         msg.point.x = float(self.x_m)
         msg.point.y = float(self.y_m)
-        msg.point.z = self._altitude
+        msg.point.z = float(self._altitude)
         self._pub_point.publish(msg)
 
         if self._publish_debug:
@@ -269,7 +282,7 @@ class MarkerRecognition(Node):
         # 왜곡 계수와 카메라 행렬 적용
         corners, ids, _ = cv2.aruco.detectMarkers(
             gray,
-            self.ARUCO_DICT,
+            self._ARUCO_DICT,
             parameters=self._ARUCO_PARAMS,cameraMatrix=self._CAMERA_MATRIX,
             distCoeff=self._DIST_COEFFS)
         if ids is None or len(ids) == 0:
