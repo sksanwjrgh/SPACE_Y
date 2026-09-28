@@ -15,7 +15,7 @@ from std_msgs.msg import String
 from geometry_msgs.msg import PointStamped
 from rclpy.node import Node
 from px4_msgs.msg import VehicleOdometry
-from sensor_msgs.msg import PointCloud2
+from sensor_msgs.msg import PointCloud2, Image, Image
 
 def build_gst_pipeline(width: int, height: int, fps: int, flip_method: int = 0) -> str:
     return (
@@ -61,7 +61,7 @@ class MarkerRecognition(Node):
         self.declare_parameter("show_window", True)
         self.declare_parameter("use_filter", True)
         self.declare_parameter("lidar_alpha", 0.3)
-        self.declare_parameter("world","aruco_windy")
+        self.declare_parameter("world","aruco")
         self.declare_parameter("lidar_altitude",0.17) # lidar와 지면 사이의 거리 (빼야하는 값)
         self.x_m=0.
         self.y_m=0.
@@ -98,37 +98,19 @@ class MarkerRecognition(Node):
         mission_mode = "flight"
         self._altitude = 0.0
 
-        # 카메라 열기
-        self._cap = None
-
-        if src_param.startswith("udp://") or src_param.endswith(".mp4"):
-            # Use GStreamer pipeline for UDP stream or video file
-            pipeline = (
-                f"udpsrc port=5600 ! application/x-rtp, encoding-name=H264 ! "
-                f"rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! appsink"
-            )
-            self.get_logger().info(f"Opening UDP stream pipeline:\n{pipeline}")
-            cap = cv2.VideoCapture(pipeline, cv2.CAP_GSTREAMER)
-            if cap.isOpened():
-                self._cap = cap
-            else:
-                self.get_logger().error("Failed to open UDP video stream")
-        else:
-            try:
-                idx = int(src_param)
-                self.get_logger().info(f"Opening V4L2 index {idx}")
-                cap = cv2.VideoCapture(idx)
-                if cap.isOpened():
-                    self._cap = cap
-            except ValueError:
-                self.get_logger().info(f"Trying to open as GStreamer pipeline:\n{src_param}")
-                cap = cv2.VideoCapture(src_param, cv2.CAP_GSTREAMER)
-                if cap.isOpened():
-                    self._cap = cap
-
-        if self._cap is None or not self._cap.isOpened():
-            self.get_logger().error("Unable to open camera")
-            raise RuntimeError("Camera open failed")
+        # Gazebo camera image를 ROS2 topic으로 직접 구독
+        self._bridge = CvBridge()
+        camera_topic = (
+            "/world/" + world_ + "/model/" + airframe_
+            + "/link/camera_link/sensor/imager/image"
+        )
+        self._camera_sub = self.create_subscription(
+            Image,
+            camera_topic,
+            self._camera_cb,
+            10
+        )
+        self.get_logger().info(f"Subscribing directly to camera: {camera_topic}")
 
         # 오도메트리 구독 (쿼터니언 -> roll/pitch)
         self._odom_sub = self.create_subscription(
@@ -156,13 +138,10 @@ class MarkerRecognition(Node):
         #self._pub_point = self.create_publisher(PointStamped, "/landing/coordinates", 10)
 
         # 퍼블리셔
-        self._bridge = CvBridge()
         self._pub_point = self.create_publisher(PointStamped, "/landing/coordinates", 10)
         if self._publish_debug:
-            from sensor_msgs.msg import Image  # Import here to avoid circular dependency if unused
             self._pub_img = self.create_publisher(Image, "/landing/video", 10)
 
-        self._camera_timer = self.create_timer(1.0 / cam_rate, self._camera_timer_cb)
 
     def _mission_cb(self, msg: String) -> None:
        mission_mode = msg.data
@@ -195,10 +174,11 @@ class MarkerRecognition(Node):
         self.get_logger().info(f"calculated altitude: {self._altitude:.04f}")
 
     # 카메라 프레임 처리
-    def _camera_timer_cb(self) -> None:
-        ret, frame = self._cap.read()
-        if not ret:
-            self.get_logger().error("Frame capture failed")
+    def _camera_cb(self, msg: Image) -> None:
+        try:
+            frame = self._bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
+        except Exception as e:
+            self.get_logger().error(f"Image conversion failed: {e}")
             return
 
         tag_centre = self._detect_first_tag(frame)
@@ -269,7 +249,7 @@ class MarkerRecognition(Node):
         # 왜곡 계수와 카메라 행렬 적용
         corners, ids, _ = cv2.aruco.detectMarkers(
             gray,
-            self.ARUCO_DICT,
+            self._ARUCO_DICT,
             parameters=self._ARUCO_PARAMS,cameraMatrix=self._CAMERA_MATRIX,
             distCoeff=self._DIST_COEFFS)
         if ids is None or len(ids) == 0:

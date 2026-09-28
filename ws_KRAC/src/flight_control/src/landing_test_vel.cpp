@@ -205,8 +205,18 @@ void LandingTest::land() {
   Eigen::Vector3f target_pos_FRD (0, 0, 0);
   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0};
   Eigen::Vector3f target_pos_NED = q*target_pos_FRD;
-  target_pos_NED.normalize();
-  Eigen::Vector3f target_vel_NED = iter_ratio_*target_pos_NED;
+
+  float landing_error = std::sqrt(desired_x_ * desired_x_ + desired_y_ * desired_y_);
+
+  // 중앙에 가까워질수록 수평 속도를 줄이는 P 제어
+  float horizontal_speed = std::min(std::abs(iter_ratio_), 2.0f * landing_error);
+  float signed_horizontal_speed = std::copysign(horizontal_speed, iter_ratio_);
+  Eigen::Vector3f target_vel_NED = Eigen::Vector3f::Zero();
+
+  if (target_pos_NED.norm() > 1e-6f) {
+    target_pos_NED.normalize();
+    target_vel_NED = signed_horizontal_speed * target_pos_NED;
+  }
 
   if(acc_alt_ > low_enough_) {
     mission_mode_ = FINISHED;
@@ -216,7 +226,10 @@ void LandingTest::land() {
 
   float nan = std::numeric_limits<float>::quiet_NaN();
   msg.position = {nan, nan, nan};
-  msg.velocity = {target_vel_NED[0], target_vel_NED[1], descent_vel_};
+
+  // 중심 0.10 이내에서 하강 시작, 하강 중에도 수평 보정 계속
+  float vertical_vel = (landing_error < 0.10f) ? descent_vel_ : 0.0f;
+  msg.velocity = {target_vel_NED[0], target_vel_NED[1], vertical_vel};
   msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
   trajectory_setpoint_publisher_->publish(msg);
 }
