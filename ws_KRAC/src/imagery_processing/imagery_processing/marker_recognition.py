@@ -61,7 +61,7 @@ class MarkerRecognition(Node):
         self.declare_parameter("show_window", True)
         self.declare_parameter("use_filter", True)
         self.declare_parameter("lidar_alpha", 0.3)
-        self.declare_parameter("world","aruco_windy")
+        self.declare_parameter("world","aruco")
         self.declare_parameter("lidar_altitude",0.17) # lidar와 지면 사이의 거리 (빼야하는 값)
         self.x_m=0.
         self.y_m=0.
@@ -186,12 +186,14 @@ class MarkerRecognition(Node):
         self._pitch = pitch
         self._have_attitude = True
 
+        self._altitude = max(0.0, -float(msg.position[2]))
+
 
     def _lidar_cb(self, msg: PointCloud2) ->None:
         #self.get_logger().info("Lidar data called")
         raw = bytes(msg.data)
         first_four = raw[0:4]
-        self._altitude = struct.unpack('<f', first_four)[0]*np.cos(self._pitch)*np.cos(self._roll) - self._lidar_altitude
+        # self._altitude = struct.unpack('<f', first_four)[0]*np.cos(self._pitch)*np.cos(self._roll) - self._lidar_altitude
         self.get_logger().info(f"calculated altitude: {self._altitude:.04f}")
 
     # 카메라 프레임 처리
@@ -269,7 +271,7 @@ class MarkerRecognition(Node):
         # 왜곡 계수와 카메라 행렬 적용
         corners, ids, _ = cv2.aruco.detectMarkers(
             gray,
-            self.ARUCO_DICT,
+            self._ARUCO_DICT,
             parameters=self._ARUCO_PARAMS,cameraMatrix=self._CAMERA_MATRIX,
             distCoeff=self._DIST_COEFFS)
         if ids is None or len(ids) == 0:

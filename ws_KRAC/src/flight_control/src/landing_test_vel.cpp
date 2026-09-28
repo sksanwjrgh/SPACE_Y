@@ -47,56 +47,115 @@ class LandingTest : public rclcpp::Node {
       trajectory_setpoint_publisher_ = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);
       vehicle_command_publisher_ = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);
 
-      auto timer_callback = [this]() -> void {
-        if(!has_odom_) {
-          RCLCPP_WARN(this->get_logger(), "Waiting for...");
+      auto timer_callback = [this]() -> void
+      {
+        if (!has_odom_)
+        {
+          RCLCPP_WARN(this->get_logger(), "Waiting for odometry...");
           return;
         }
 
-        if(!armed_ && mission_mode_ != FINISHED) {
-          this->publish_vehicle_command(VehicleCommand::VEHICLE_CMD_DO_SET_MODE, 1, 6);
+        descent_vel_ =
+            (float)this->get_parameter("descent_vel_param").as_double();
+
+        // PX4가 Offboard 신호를 먼저 충분히 받도록 함
+        if (offboard_setpoint_counter_ == 10)
+        {
+          this->publish_vehicle_command(
+              VehicleCommand::VEHICLE_CMD_DO_SET_MODE,
+              1,
+              6);
+
           this->arm();
+
+          RCLCPP_INFO(
+              this->get_logger(),
+              "Offboard mode command sent");
         }
 
-        descent_vel_ = (float)this->get_parameter("descent_vel_param").as_double();
-
+        // 항상 10 Hz로 전송
         publish_offboard_control_mode();
 
-        switch (mission_mode_) {
-          default:
+        if (mission_mode_ == LANDING)
+        {
 
-          case LANDING:
+          if (have_alt_)
+          {
             land();
-            break;
+          }
+          else
+          {
+            // landing 좌표가 오기 전에도 setpoint를 계속 보내야 함
+            TrajectorySetpoint msg{};
 
-          case FINISHED:
-            if(landed_ && armed_) disarm();
-            if(!armed_) return;
-            break;
+            float nan =
+                std::numeric_limits<float>::quiet_NaN();
+
+            msg.position = {nan, nan, nan};
+
+            // 현재 위치에서 호버링하도록 속도 0
+            msg.velocity = {
+                0.0f,
+                0.0f,
+                0.0f};
+
+            msg.timestamp =
+                this->get_clock()->now().nanoseconds() / 1000;
+
+            trajectory_setpoint_publisher_->publish(msg);
+
+            RCLCPP_WARN_THROTTLE(
+                this->get_logger(),
+                *this->get_clock(),
+                2000,
+                "Waiting for /landing/coordinates...");
+          }
         }
-        offboard_setpoint_counter_ ++;
+
+        else if (mission_mode_ == FINISHED)
+        {
+
+          if (landed_ && armed_)
+          {
+            disarm();
+          }
+
+          if (!armed_)
+          {
+            return;
+          }
+        }
+
+        // 처음 10회 동안 setpoint를 먼저 전송
+      if (offboard_setpoint_counter_ < 11)
+      {
+        offboard_setpoint_counter_++;
+      }
+    };
+
+    timer_ = this->create_wall_timer(100ms, timer_callback);
+  }
+
+
+    private:
+      rclcpp::TimerBase::SharedPtr timer_;
+      std::atomic<uint64_t> timestamp_;
+
+      rclcpp::Publisher<OffboardControlMode>::SharedPtr offboard_control_mode_publisher_;
+      rclcpp::Publisher<TrajectorySetpoint>::SharedPtr trajectory_setpoint_publisher_;
+      rclcpp::Publisher<VehicleCommand>::SharedPtr vehicle_command_publisher_;
+
+      rclcpp::Subscription<px4_msgs::msg::VehicleOdometry>::SharedPtr odom_sub_;
+      rclcpp::Subscription<px4_msgs::msg::VehicleLandDetected>::SharedPtr landed_sub_;
+      rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr desired_setpoint_sub_;
+
+      px4_msgs::msg::VehicleOdometry curr_odom_;
+
+      enum Mission
+      {
+        LANDING,
+        FINISHED,
       };
-      timer_ = this->create_wall_timer(100ms, timer_callback);
-    };
-
-  private:
-    rclcpp::TimerBase::SharedPtr timer_;
-    std::atomic<uint64_t> timestamp_;
-
-    rclcpp::Publisher<OffboardControlMode>::SharedPtr offboard_control_mode_publisher_;
-    rclcpp::Publisher<TrajectorySetpoint>::SharedPtr trajectory_setpoint_publisher_;
-    rclcpp::Publisher<VehicleCommand>::SharedPtr vehicle_command_publisher_;
-
-    rclcpp::Subscription<px4_msgs::msg::VehicleOdometry>::SharedPtr odom_sub_;
-    rclcpp::Subscription<px4_msgs::msg::VehicleLandDetected>::SharedPtr landed_sub_;
-    rclcpp::Subscription<geometry_msgs::msg::PointStamped>::SharedPtr desired_setpoint_sub_;
-
-    px4_msgs::msg::VehicleOdometry curr_odom_;
-
-    enum Mission {
-      LANDING,
-      FINISHED,
-    };
 
     bool has_odom_ = false;
     bool armed_ = false;
@@ -208,15 +267,55 @@ void LandingTest::land() {
   target_pos_NED.normalize();
   Eigen::Vector3f target_vel_NED = iter_ratio_*target_pos_NED;
 
-  if(acc_alt_ > low_enough_) {
+  if (acc_alt_ > low_enough_)
+  {
     mission_mode_ = FINISHED;
-    publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
-    RCLCPP_INFO(this->get_logger(), "[Landing] Low enough at altitude %.3f. Sending land command.", -acc_alt_);
+
+    publish_vehicle_command(
+        px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
+
+    RCLCPP_INFO(
+        this->get_logger(),
+        "[Landing] Low enough at altitude %.3f. Sending land command.",
+        -acc_alt_);
+
+    return;
   }
 
   float nan = std::numeric_limits<float>::quiet_NaN();
   msg.position = {nan, nan, nan};
-  msg.velocity = {target_vel_NED[0], target_vel_NED[1], descent_vel_};
+
+  float horizontal_error = std::sqrt(
+    desired_x_ * desired_x_ +
+    desired_y_ * desired_y_
+  );
+
+  if (horizontal_error > 0.10f) {
+    // 마커에서 벗어나 있으면 수평 이동만
+    msg.velocity = {
+      target_vel_NED[0],
+      target_vel_NED[1],
+      0.0f
+    };
+
+    RCLCPP_INFO(
+      this->get_logger(),
+      "[Landing] Aligning marker: x=%.3f y=%.3f error=%.3f",
+      desired_x_, desired_y_, horizontal_error
+    );
+  } else {
+    // 마커 중앙에 충분히 가까워진 후에만 하강
+    msg.velocity = {
+      0.0f,
+      0.0f,
+      descent_vel_
+    };
+
+    RCLCPP_INFO(
+      this->get_logger(),
+      "[Landing] Marker centered. Descending."
+    );
+  }
   msg.timestamp = this->get_clock()->now().nanoseconds() / 1000;
   trajectory_setpoint_publisher_->publish(msg);
 }
