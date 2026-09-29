@@ -121,3 +121,40 @@ ros2 launch launch_package autoland.launch.py
 | 6 | Autoland 실행 | `ros2 launch launch_package autoland.launch.py` |
 
 ---
+
+---
+
+# 🔧 시뮬레이션 개선 사항
+
+### **1️⃣ Vision 입력 방식 개선**
+
+기존 `marker_recognition` 노드는 Gazebo 카메라 영상을 UDP/H264 스트리밍으로 전달받아 OpenCV에서 디코딩하는 구조였음.
+
+실행 과정에서 H264 디코딩 오류 및 영상 불안정 문제가 발생하여, Gazebo 카메라의 ROS2 `Image` 토픽을 직접 subscribe하도록 변경함.
+
+> 기존  
+> `Gazebo Camera → H264 → UDP → OpenCV → ArUco Detection`
+
+> 개선  
+> `Gazebo Camera → ROS2 Image → CvBridge/OpenCV → ArUco Detection`
+
+불필요한 영상 인코딩/디코딩 과정을 제거하여 시뮬레이션 환경에서 영상 입력을 보다 안정적으로 처리하도록 개선함.
+
+---
+
+### **2️⃣ 자동 착륙 제어 로직 개선**
+
+기존 `landing_test_vel`에서는 마커 중심과의 오차가 큰 상태에서도 수평 이동과 하강이 동시에 이루어졌으며, 목표점 근처에서도 수평 속도가 거의 일정하여 overshoot가 발생할 수 있었음.
+
+이를 개선하여:
+
+- 마커 중심 오차에 비례하여 수평 속도를 감소시키도록 수정
+- 중심에서 멀 때는 수평 정렬을 우선 수행
+- 인식 좌표 오차가 설정한 threshold 이하일 때만 하강 시작
+- 하강 중에도 지속적으로 수평 위치 보정 수행
+
+하도록 변경함.
+
+시뮬레이션 테스트에서 약 **3 m의 수평 오프셋, 10 m 고도**에서 시작하여 마커 중심 근처로 이동 후 착륙하는 것을 확인함.
+
+---
