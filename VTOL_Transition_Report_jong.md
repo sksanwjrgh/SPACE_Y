@@ -84,4 +84,614 @@ AI가 설계한 시뮬레이션 결과 데이터를 분석해 본 결과, 매우
 
 
 
-결론적으로, 비행 제어 및 C++ 프로그래밍 역량의 부족을 최신 학술 데이터와 AI 에이전트의 결합으로 훌륭히 상쇄할 수 있었습니다. 
+결론적으로, 비행 제어 및 C++ 프로그래밍 역량의 부족을 최신 학술 데이터와 AI 에이전트의 결합으로 훌륭히 상쇄할 수 있었습니다.  
+
+
+
+#include <Eigen/Dense>
+
+#include <algorithm>
+#include <cmath>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+using namespace Eigen;
+
+
+// ============================================================
+// Utility
+// ============================================================
+
+constexpr double PI = 3.14159265358979323846;
+constexpr double DEG2RAD = PI / 180.0;
+constexpr double RAD2DEG = 180.0 / PI;
+
+double clamp(
+    double value,
+    double min_value,
+    double max_value)
+{
+    return std::max(
+        min_value,
+        std::min(value, max_value));
+}
+
+
+// ============================================================
+// Aircraft Parameters
+// ============================================================
+
+struct Aircraft
+{
+    // Aircraft mass
+    double mass = 5.0;                 // kg
+
+    // Gravity
+    double gravity = 9.80665;          // m/s^2
+
+    // Rotor thrust limit
+    double rotor_max = 80.0;           // N
+
+    // Pusher thrust limit
+    double pusher_max = 40.0;          // N
+};
+
+
+// ============================================================
+// Transition Corridor
+//
+// Safe transition region:
+//
+//      V_min <= V <= V_max
+//
+//      theta_min <= theta <= theta_max
+//
+// The aircraft should remain inside this region
+// while accelerating from VTOL to fixed-wing flight.
+// ============================================================
+
+struct TransitionCorridor
+{
+    double V_min = 8.0;                // m/s
+    double V_max = 24.0;               // m/s
+
+    double theta_min = -12.0 * DEG2RAD;
+    double theta_max = 18.0 * DEG2RAD;
+
+
+    bool isValid(
+        double velocity,
+        double pitch)
+    {
+        return
+            velocity >= V_min &&
+            velocity <= V_max &&
+            pitch >= theta_min &&
+            pitch <= theta_max;
+    }
+};
+
+
+// ============================================================
+// Transition Trajectory
+//
+// Instead of:
+//
+//     MC OFF
+//        |
+//        v
+//     FW ON
+//
+// generate a continuous transition trajectory.
+//
+// Initial:
+//     V = 8 m/s
+//     pitch = -8 deg
+//
+// Final:
+//     V = 24 m/s
+//     pitch = +8 deg
+//
+// Smoothstep is used to prevent abrupt command changes.
+// ============================================================
+
+struct TransitionTrajectory
+{
+    double transition_time = 9.5;
+
+    double V_initial = 8.0;
+    double V_final = 24.0;
+
+    double pitch_initial = -8.0 * DEG2RAD;
+    double pitch_final = 8.0 * DEG2RAD;
+
+
+    static double smoothStep(
+        double x)
+    {
+        x = clamp(x, 0.0, 1.0);
+
+        return
+            x * x *
+            (3.0 - 2.0 * x);
+    }
+
+
+    double velocity(
+        double t)
+    {
+        double s =
+            smoothStep(
+                t / transition_time);
+
+        return
+            V_initial +
+            (V_final - V_initial) * s;
+    }
+
+
+    double pitch(
+        double t)
+    {
+        double s =
+            smoothStep(
+                t / transition_time);
+
+        return
+            pitch_initial +
+            (pitch_final - pitch_initial) * s;
+    }
+};
+
+
+// ============================================================
+// NDI Controller
+//
+// Longitudinal model:
+//
+// [ az ]   [ -sin(theta)/m    cos(theta)/m ] [ F_rotor  ]
+// [ ax ] = [ -cos(theta)/m   -sin(theta)/m ] [ F_pusher ]
+//
+// Therefore:
+//
+//     F = A^-1 * b
+//
+// where:
+//
+//     b = [ az + g ]
+//         [ ax     ]
+//
+// This is the theoretical NDI calculation
+// described in the research report.
+// ============================================================
+
+class NDIController
+{
+public:
+
+    NDIController(
+        const Aircraft& aircraft)
+        : aircraft_(aircraft)
+    {
+    }
+
+
+    Vector2d computeForce(
+        double pitch,
+        double desired_ax,
+        double desired_az)
+    {
+        Matrix2d A;
+
+
+        A <<
+            -std::sin(pitch) / aircraft_.mass,
+             std::cos(pitch) / aircraft_.mass,
+
+            -std::cos(pitch) / aircraft_.mass,
+            -std::sin(pitch) / aircraft_.mass;
+
+
+        /*
+         * Desired acceleration vector
+         *
+         * Vertical:
+         *
+         *     az + g
+         *
+         * Horizontal:
+         *
+         *     ax
+         */
+
+        Vector2d desired;
+
+        desired <<
+            desired_az + aircraft_.gravity,
+            desired_ax;
+
+
+        /*
+         * NDI inverse
+         */
+
+        if (std::abs(A.determinant()) < 1e-8)
+        {
+            return Vector2d::Zero();
+        }
+
+
+        return A.inverse() * desired;
+    }
+
+
+private:
+
+    Aircraft aircraft_;
+};
+
+
+// ============================================================
+// Optimal Transition Controller
+//
+// Generates desired acceleration from the difference between
+// the actual state and the theoretically optimal trajectory.
+//
+// This is NOT a flight controller.
+//
+// It is only a theoretical trajectory-following experiment.
+// ============================================================
+
+class TransitionExperiment
+{
+public:
+
+    TransitionExperiment(
+        const Aircraft& aircraft,
+        const TransitionCorridor& corridor,
+        const TransitionTrajectory& trajectory)
+        : aircraft_(aircraft),
+          corridor_(corridor),
+          trajectory_(trajectory),
+          ndi_(aircraft)
+    {
+    }
+
+
+    void run(
+        const std::string& filename)
+    {
+        std::ofstream file(filename);
+
+
+        if (!file.is_open())
+        {
+            std::cerr
+                << "Failed to open output file: "
+                << filename
+                << std::endl;
+
+            return;
+        }
+
+
+        // CSV header
+
+        file
+            << "time,"
+            << "velocity,"
+            << "velocity_ref,"
+            << "pitch,"
+            << "pitch_ref,"
+            << "velocity_error,"
+            << "pitch_error,"
+            << "desired_ax,"
+            << "desired_az,"
+            << "rotor_force,"
+            << "pusher_force,"
+            << "rotor_force_limited,"
+            << "pusher_force_limited,"
+            << "corridor_valid,"
+            << "actuator_saturated"
+            << "\n";
+
+
+        std::cout
+            << "\n"
+            << "========================================\n"
+            << " Standard VTOL Transition Experiment\n"
+            << " Transition Corridor + NDI\n"
+            << "========================================\n\n";
+
+
+        std::cout
+            << std::fixed
+            << std::setprecision(3);
+
+
+        const double dt = 0.01;
+
+
+        /*
+         * Simulated aircraft state
+         *
+         * Initial state
+         */
+
+        double velocity =
+            trajectory_.V_initial;
+
+        double pitch =
+            trajectory_.pitch_initial;
+
+
+        for (
+            double t = 0.0;
+            t <= trajectory_.transition_time;
+            t += dt)
+        {
+            // ----------------------------------------
+            // Reference trajectory
+            // ----------------------------------------
+
+            double velocity_ref =
+                trajectory_.velocity(t);
+
+            double pitch_ref =
+                trajectory_.pitch(t);
+
+
+            // ----------------------------------------
+            // Tracking error
+            // ----------------------------------------
+
+            double velocity_error =
+                velocity_ref - velocity;
+
+            double pitch_error =
+                pitch_ref - pitch;
+
+
+            /*
+             * Simple theoretical acceleration command.
+             *
+             * This is not PX4 PID.
+             *
+             * It only generates a virtual desired
+             * acceleration for the NDI experiment.
+             */
+
+            double desired_ax =
+                clamp(
+                    0.8 * velocity_error,
+                    -3.0,
+                    3.0);
+
+
+            /*
+             * Vertical acceleration target.
+             *
+             * Ideal transition assumption:
+             *
+             *     az = 0
+             *
+             * meaning altitude is maintained.
+             */
+
+            double desired_az = 0.0;
+
+
+            // ----------------------------------------
+            // NDI
+            // ----------------------------------------
+
+            Vector2d force =
+                ndi_.computeForce(
+                    pitch,
+                    desired_ax,
+                    desired_az);
+
+
+            double rotor_force =
+                force(0);
+
+            double pusher_force =
+                force(1);
+
+
+            // ----------------------------------------
+            // Actuator saturation
+            // ----------------------------------------
+
+            double rotor_force_limited =
+                clamp(
+                    rotor_force,
+                    0.0,
+                    aircraft_.rotor_max);
+
+
+            double pusher_force_limited =
+                clamp(
+                    pusher_force,
+                    0.0,
+                    aircraft_.pusher_max);
+
+
+            bool actuator_saturated =
+                std::abs(
+                    rotor_force -
+                    rotor_force_limited) > 1e-6
+                ||
+                std::abs(
+                    pusher_force -
+                    pusher_force_limited) > 1e-6;
+
+
+            // ----------------------------------------
+            // Transition Corridor
+            // ----------------------------------------
+
+            bool corridor_valid =
+                corridor_.isValid(
+                    velocity,
+                    pitch);
+
+
+            // ----------------------------------------
+            // Save result
+            // ----------------------------------------
+
+            file
+                << t << ","
+                << velocity << ","
+                << velocity_ref << ","
+                << pitch * RAD2DEG << ","
+                << pitch_ref * RAD2DEG << ","
+                << velocity_error << ","
+                << pitch_error * RAD2DEG << ","
+                << desired_ax << ","
+                << desired_az << ","
+                << rotor_force << ","
+                << pusher_force << ","
+                << rotor_force_limited << ","
+                << pusher_force_limited << ","
+                << corridor_valid << ","
+                << actuator_saturated
+                << "\n";
+
+
+            // ----------------------------------------
+            // Theoretical state update
+            //
+            // This part is intentionally simple.
+            //
+            // The purpose is to visualize and analyze
+            // the NDI / trajectory behavior rather than
+            // reproduce the complete aircraft dynamics.
+            // ----------------------------------------
+
+            double acceleration =
+                desired_ax;
+
+
+            velocity +=
+                acceleration * dt;
+
+
+            /*
+             * Limit the virtual state so that the
+             * experiment remains inside a realistic
+             * transition envelope.
+             */
+
+            velocity =
+                clamp(
+                    velocity,
+                    0.0,
+                    trajectory_.V_final);
+
+
+            /*
+             * Pitch follows the reference trajectory
+             * with a first-order response.
+             *
+             * This represents the idea of gradual
+             * pitch transition rather than hard switching.
+             */
+
+            const double pitch_response =
+                3.0;
+
+
+            pitch +=
+                pitch_response *
+                pitch_error *
+                dt;
+
+
+            // ----------------------------------------
+            // Console output every 1 second
+            // ----------------------------------------
+
+            if (
+                static_cast<int>(t * 100) % 100
+                == 0)
+            {
+                std::cout
+                    << "t = "
+                    << t
+                    << " s | V = "
+                    << velocity
+                    << " m/s | Vref = "
+                    << velocity_ref
+                    << " m/s | Pitch = "
+                    << pitch * RAD2DEG
+                    << " deg | PitchRef = "
+                    << pitch_ref * RAD2DEG
+                    << " deg | Rotor = "
+                    << rotor_force_limited
+                    << " N | Pusher = "
+                    << pusher_force_limited
+                    << " N | Corridor = "
+                    << (
+                        corridor_valid
+                        ? "OK"
+                        : "OUT"
+                    )
+                    << "\n";
+            }
+        }
+
+
+        file.close();
+
+
+        std::cout
+            << "\nSimulation complete.\n"
+            << "Result saved to: "
+            << filename
+            << "\n";
+    }
+
+
+private:
+
+    Aircraft aircraft_;
+
+    TransitionCorridor corridor_;
+
+    TransitionTrajectory trajectory_;
+
+    NDIController ndi_;
+};
+
+
+// ============================================================
+// Main
+// ============================================================
+
+int main()
+{
+    Aircraft aircraft;
+
+
+    TransitionCorridor corridor;
+
+
+    TransitionTrajectory trajectory;
+
+
+    TransitionExperiment experiment(
+        aircraft,
+        corridor,
+        trajectory);
+
+
+    experiment.run(
+        "transition_result.csv");
+
+
+    return 0;
+}
