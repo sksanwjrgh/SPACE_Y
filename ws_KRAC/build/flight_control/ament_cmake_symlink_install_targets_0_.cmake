@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ldy/space_y/ws_KRAC/build/flight_control/landing_test" "/home/ldy/space_y/ws_KRAC/build/flight_control/landing_test_vel" "/home/ldy/space_y/ws_KRAC/build/flight_control/landing_test_flight" "TARGETS" "landing_test" "landing_test_vel" "landing_test_flight" "DESTINATION" "lib/flight_control")

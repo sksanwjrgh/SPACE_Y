@@ -1,0 +1,8 @@
+{
+  "values": {
+    "MPC_LAND_ALT1": 10.0,
+    "MPC_LAND_ALT2": 5.0,
+    "MPC_LAND_SPEED": 0.7,
+    "MPC_Z_VEL_MAX_DN": 1.5
+  }
+}

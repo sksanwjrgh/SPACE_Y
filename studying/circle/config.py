@@ -1,0 +1,80 @@
+"""STEP 3/4/6 설정. 거리 m, 각도 rad, 시간 s, 속도 m/s."""
+
+from pathlib import Path
+import math
+
+NODE_NAME = "px4_state_monitor"
+LOCAL_POSITION_TOPIC = "/fmu/out/vehicle_local_position"
+VEHICLE_STATUS_TOPIC = "/fmu/out/vehicle_status_v1"
+LAND_DETECTED_TOPIC = "/fmu/out/vehicle_land_detected"
+
+PRINT_PERIOD_S = 1.0
+DATA_TIMEOUT_S = 3.0
+QOS_DEPTH = 5
+
+OFFBOARD_TOPIC = "/fmu/in/offboard_control_mode"
+TRAJECTORY_TOPIC = "/fmu/in/trajectory_setpoint"
+COMMAND_TOPIC = "/fmu/in/vehicle_command"
+COMMAND_ACK_TOPIC = "/fmu/out/vehicle_command_ack"
+SOURCE_SYSTEM = 245
+SOURCE_COMPONENT = 191
+
+CONTROL_PERIOD_S = 0.05
+CONTROL_GAP_LIMIT_S = 0.3
+FLIGHT_DATA_TIMEOUT_S = 1.5
+INITIAL_STABLE_S = 2.0
+PRESTREAM_S = 2.0
+PREPARE_TIMEOUT_S = 15.0
+COMMAND_RETRY_S = 1.0
+WAIT_TIMEOUT_S = 30.0
+MODE_TIMEOUT_S = 15.0
+TAKEOFF_TIMEOUT_S = 40.0
+LAND_TIMEOUT_S = 90.0
+TAKEOFF_ALTITUDE_M = 4.0
+TAKEOFF_RAMP_S = 12.0
+POSITION_TOLERANCE_M = 0.25
+SPEED_TOLERANCE_M_S = 0.25
+SETTLE_S = 2.0
+HOVER_S = 5.0
+MAX_HORIZONTAL_DISTANCE_M = 1.5
+MAX_ALTITUDE_M = 6.0
+MAX_TRACKING_ERROR_M = 2.0
+MAX_GROUND_YAW_DRIFT_RAD = 0.15
+FRAME_TEST_YAW_RAD = math.pi / 2
+FRAME_TEST_YAW_RAMP_S = 10.0
+FRAME_TEST_FORWARD_M = 1.0
+FRAME_TEST_MOVE_S = 6.0
+YAW_TOLERANCE_RAD = math.radians(6.0)
+FRAME_TEST_TIMEOUT_S = 30.0
+
+ORBIT_RADIUS_M = 4.0
+ORBIT_SPEED_M_S = 0.75
+ORBIT_TURNS = 2
+ORBIT_CLOCKWISE = True
+FIXED_YAW_TEST_TURNS = 1
+ORBIT_SPEED_RAMP_S = 3.0
+ORBIT_FORWARD_S = 15.0
+ORBIT_RETURN_S = 15.0
+ORBIT_TURN_S = 12.0
+ORBIT_STAGE_TIMEOUT_S = 25.0
+ORBIT_COMPLETION_TIMEOUT_S = 25.0
+ORBIT_POSITION_MARGIN_M = 1.5
+ORBIT_MIN_VALID_RADIUS_M = 1.0
+ORBIT_MAX_RADIAL_ERROR_M = 0.8
+ORBIT_MAX_YAW_ERROR_RAD = math.radians(30)
+ORBIT_ERROR_HOLD_S = 2.0
+ORBIT_ANGLE_TOLERANCE_RAD = math.radians(5)
+ORBIT_MAX_ANGLE_STEP_RAD = math.radians(30)
+CENTER_YAW_HOLD_RADIUS_M = 0.5
+
+# AUTO_LAND 감속 프로파일. main.py는 자동 적용하지 않는다.
+# landing_profile.py --apply로 별도 적용하며, 기존 값은 logs에 백업한다.
+LANDING_PROFILE = {
+    "MPC_LAND_ALT1": 1.5,
+    "MPC_LAND_ALT2": 1.0,
+    "MPC_LAND_SPEED": 0.6,
+    "MPC_Z_VEL_MAX_DN": 0.7,
+}
+
+PX4_ROOT = Path("/home/ldy/PX4-Autopilot")
+LOG_DIR = Path(__file__).resolve().parent / "logs"

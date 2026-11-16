@@ -1,0 +1,28 @@
+{
+  "csv": "logs/step3_20261117_012643_693186.csv",
+  "duration_s": 33.252,
+  "above_1_5m": {
+    "samples": 38,
+    "mean_vz_down_m_s": 0.6913638961942572,
+    "min_vz": 0.6739478707313538,
+    "max_vz": 0.6981109380722046
+  },
+  "below_1m": {
+    "samples": 20,
+    "mean_vz_down_m_s": 0.6131766229867935,
+    "min_vz": 0.6104460954666138,
+    "max_vz": 0.616926908493042
+  },
+  "final": {
+    "state": "DONE",
+    "armed": "False",
+    "landed": "True",
+    "failure": ""
+  },
+  "profile": {
+    "MPC_LAND_ALT1": 1.5,
+    "MPC_LAND_ALT2": 1,
+    "MPC_LAND_SPEED": 0.6,
+    "MPC_Z_VEL_MAX_DN": 0.7
+  }
+}

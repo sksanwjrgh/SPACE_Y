@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating imagery_processing.egg-info
+writing imagery_processing.egg-info/PKG-INFO
+writing dependency_links to imagery_processing.egg-info/dependency_links.txt
+writing entry points to imagery_processing.egg-info/entry_points.txt
+writing requirements to imagery_processing.egg-info/requires.txt
+writing top-level names to imagery_processing.egg-info/top_level.txt
+writing manifest file 'imagery_processing.egg-info/SOURCES.txt'
+reading manifest file 'imagery_processing.egg-info/SOURCES.txt'
+writing manifest file 'imagery_processing.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery-processing.egg-link (link to .)
+Installing marker_recognition script to /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/imagery_processing
+
+Installed /home/ldy/space_y/ws_KRAC/build/imagery_processing
+running symlink_data
+creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/ament_index
+creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/ament_index/resource_index
+creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/ament_index/resource_index/packages
+symbolically linking /home/ldy/space_y/ws_KRAC/build/imagery_processing/resource/imagery_processing -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/ament_index/resource_index/packages
+symbolically linking /home/ldy/space_y/ws_KRAC/build/imagery_processing/package.xml -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing

@@ -1,0 +1,10 @@
+[01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::land()[m[K’:
+[01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:219:9:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat nan[m[K’
+  219 |   float [01;31m[Knan[m[K = std::numeric_limits<float>::quiet_NaN();
+      |         [01;31m[K^~~[m[K
+[01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:217:9:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat nan[m[K’ previously declared here
+  217 |   float [01;36m[Knan[m[K = std::numeric_limits<float>::quiet_NaN();
+      |         [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/landing_test_vel.dir/build.make:76: CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/landing_test_vel.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

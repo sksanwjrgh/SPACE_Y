@@ -1,0 +1,9 @@
+[INFO] [1794843903.049150190] [px4_state_monitor]: PX4 상태 모니터 시작 | 토픽: /fmu/out/vehicle_local_position, /fmu/out/vehicle_status_v1, /fmu/out/vehicle_land_detected
+[INFO] [1794843904.026497943] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843905.026410164] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843906.026115138] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843907.025945423] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843908.026164550] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843909.026000032] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843910.026320501] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신
+[INFO] [1794843911.025954110] [px4_state_monitor]: 상태: 위치: 미수신; 기체 상태: 미수신; 착륙 상태: 미수신

@@ -1,0 +1,15 @@
+[0.047s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[0.206s] [ 33%] Built target landing_test_flight
+[0.209s] [ 50%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m
+[0.209s] [ 83%] Built target landing_test
+[9.655s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::land()[m[K’:
+[9.655s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:219:9:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat nan[m[K’
+[9.655s]   219 |   float [01;31m[Knan[m[K = std::numeric_limits<float>::quiet_NaN();
+[9.656s]       |         [01;31m[K^~~[m[K
+[9.656s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:217:9:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat nan[m[K’ previously declared here
+[9.656s]   217 |   float [01;36m[Knan[m[K = std::numeric_limits<float>::quiet_NaN();
+[9.656s]       |         [01;36m[K^~~[m[K
+[22.049s] gmake[2]: *** [CMakeFiles/landing_test_vel.dir/build.make:76: CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o] Error 1
+[22.049s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/landing_test_vel.dir/all] Error 2
+[22.050s] gmake: *** [Makefile:146: all] Error 2
+[22.057s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28

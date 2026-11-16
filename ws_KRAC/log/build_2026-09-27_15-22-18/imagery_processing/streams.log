@@ -1,0 +1,37 @@
+[0.601s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build
+[0.766s] running develop
+[0.869s] Removing /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery-processing.egg-link (link to .)
+[0.889s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing' returned '0': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build
+[0.890s] Invoking command in '/home/ldy/space_y/ws_KRAC/src/imagery_processing': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imagery_processing build --build-base /home/ldy/space_y/ws_KRAC/build/imagery_processing/build install --record /home/ldy/space_y/ws_KRAC/build/imagery_processing/install.log --install-scripts $base/lib/imagery_processing --single-version-externally-managed install_data --force
+[1.046s] running egg_info
+[1.046s] writing ../../build/imagery_processing/imagery_processing.egg-info/PKG-INFO
+[1.046s] writing dependency_links to ../../build/imagery_processing/imagery_processing.egg-info/dependency_links.txt
+[1.046s] writing entry points to ../../build/imagery_processing/imagery_processing.egg-info/entry_points.txt
+[1.046s] writing requirements to ../../build/imagery_processing/imagery_processing.egg-info/requires.txt
+[1.046s] writing top-level names to ../../build/imagery_processing/imagery_processing.egg-info/top_level.txt
+[1.048s] reading manifest file '../../build/imagery_processing/imagery_processing.egg-info/SOURCES.txt'
+[1.049s] adding license file 'LICENSE'
+[1.049s] writing manifest file '../../build/imagery_processing/imagery_processing.egg-info/SOURCES.txt'
+[1.050s] running build
+[1.050s] running build_py
+[1.050s] creating /home/ldy/space_y/ws_KRAC/build/imagery_processing/build
+[1.050s] creating /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib
+[1.050s] creating /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib/imagery_processing
+[1.050s] copying imagery_processing/__init__.py -> /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib/imagery_processing
+[1.050s] copying imagery_processing/marker_recognition.py -> /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib/imagery_processing
+[1.052s] running install
+[1.053s] running install_lib
+[1.053s] creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing
+[1.053s] copying /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib/imagery_processing/__init__.py -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing
+[1.053s] copying /home/ldy/space_y/ws_KRAC/build/imagery_processing/build/lib/imagery_processing/marker_recognition.py -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing
+[1.053s] byte-compiling /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing/__init__.py to __init__.cpython-310.pyc
+[1.053s] byte-compiling /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing/marker_recognition.py to marker_recognition.cpython-310.pyc
+[1.055s] running install_data
+[1.055s] copying resource/imagery_processing -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/ament_index/resource_index/packages
+[1.060s] copying package.xml -> /home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing
+[1.060s] running install_egg_info
+[1.062s] Copying ../../build/imagery_processing/imagery_processing.egg-info to /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery_processing-0.0.0-py3.10.egg-info
+[1.065s] running install_scripts
+[1.079s] Installing marker_recognition script to /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/imagery_processing
+[1.079s] writing list of installed files to '/home/ldy/space_y/ws_KRAC/build/imagery_processing/install.log'
+[1.097s] Invoked command in '/home/ldy/space_y/ws_KRAC/src/imagery_processing' returned '0': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imagery_processing build --build-base /home/ldy/space_y/ws_KRAC/build/imagery_processing/build install --record /home/ldy/space_y/ws_KRAC/build/imagery_processing/install.log --install-scripts $base/lib/imagery_processing --single-version-externally-managed install_data --force

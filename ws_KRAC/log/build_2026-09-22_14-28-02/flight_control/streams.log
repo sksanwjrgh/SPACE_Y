@@ -1,0 +1,30 @@
+[0.053s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[0.170s] [35m[1mConsolidate compiler generated dependencies of target landing_test_vel[0m
+[0.203s] [ 33%] Built target landing_test
+[0.204s] [ 66%] Built target landing_test_flight
+[0.221s] [ 83%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m
+[41.444s] [100%] [32m[1mLinking CXX executable landing_test_vel[0m
+[43.523s] [100%] Built target landing_test_vel
+[43.553s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[43.573s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --install /home/ldy/space_y/ws_KRAC/build/flight_control
+[43.592s] -- Install configuration: ""
+[43.594s] -- Execute custom install script
+[43.595s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test
+[43.596s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_vel
+[43.596s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_flight
+[43.596s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/package_run_dependencies/flight_control
+[43.597s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/parent_prefix_path/flight_control
+[43.598s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.sh
+[43.598s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.dsv
+[43.598s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.sh
+[43.598s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.dsv
+[43.599s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.bash
+[43.599s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.sh
+[43.599s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.zsh
+[43.600s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.dsv
+[43.600s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.dsv
+[43.626s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/packages/flight_control
+[43.627s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig.cmake
+[43.627s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig-version.cmake
+[43.627s] -- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.xml
+[43.633s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --install /home/ldy/space_y/ws_KRAC/build/flight_control

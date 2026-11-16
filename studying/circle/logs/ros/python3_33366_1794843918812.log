@@ -1,0 +1,65 @@
+[INFO] [1794843918.880528044] [px4_state_monitor]: PX4 상태 모니터 시작 | 토픽: /fmu/out/vehicle_local_position, /fmu/out/vehicle_status_v1, /fmu/out/vehicle_land_detected
+[INFO] [1794843919.860164927] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=0.004, y=0.005, z=-0.026 | heading=1.675 rad (96.0°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843919822988, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843919518988, 수신 후 경과=0.31s
+  착륙: timestamp_us=1794843919638988, 수신 후 경과=0.19s
+[INFO] [1794843920.860118387] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=-0.005, y=0.012, z=-0.015 | heading=1.675 rad (96.0°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843920822950, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843920526950, 수신 후 경과=0.30s
+  착륙: timestamp_us=1794843920638950, 수신 후 경과=0.19s
+[INFO] [1794843921.860289281] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=0.016, y=0.010, z=-0.020 | heading=1.675 rad (96.0°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843921822910, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843921534910, 수신 후 경과=0.29s
+  착륙: timestamp_us=1794843921638910, 수신 후 경과=0.19s
+[INFO] [1794843922.860239865] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=0.021, y=0.006, z=-0.034 | heading=1.675 rad (96.0°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843922822872, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843922542872, 수신 후 경과=0.28s
+  착륙: timestamp_us=1794843922638872, 수신 후 경과=0.19s
+[INFO] [1794843923.860402704] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=0.013, y=-0.010, z=-0.039 | heading=1.675 rad (95.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843923822834, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843923550834, 수신 후 경과=0.28s
+  착륙: timestamp_us=1794843923638834, 수신 후 경과=0.19s
+[INFO] [1794843924.860248327] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=-0.003, y=-0.011, z=-0.037 | heading=1.674 rad (95.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843924822798, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843924558798, 수신 후 경과=0.27s
+  착륙: timestamp_us=1794843924638798, 수신 후 경과=0.19s
+[INFO] [1794843925.860094172] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=-0.007, y=-0.008, z=-0.052 | heading=1.675 rad (95.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843925822760, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843925566760, 수신 후 경과=0.26s
+  착륙: timestamp_us=1794843925638760, 수신 후 경과=0.19s
+[INFO] [1794843926.860318062] [px4_state_monitor]: 상태: heading 미준비
+  NED 위치 [m]: x=0.001, y=-0.009, z=-0.046 | heading=1.675 rad (96.0°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/1
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  位置: timestamp_us=1794843926822724, 수신 후 경과=0.00s
+  状態: timestamp_us=1794843926574724, 수신 후 경과=0.25s
+  착륙: timestamp_us=1794843926638724, 수신 후 경과=0.19s

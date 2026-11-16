@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating launch_package.egg-info
+writing launch_package.egg-info/PKG-INFO
+writing dependency_links to launch_package.egg-info/dependency_links.txt
+writing entry points to launch_package.egg-info/entry_points.txt
+writing requirements to launch_package.egg-info/requires.txt
+writing top-level names to launch_package.egg-info/top_level.txt
+writing manifest file 'launch_package.egg-info/SOURCES.txt'
+reading manifest file 'launch_package.egg-info/SOURCES.txt'
+writing manifest file 'launch_package.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages/launch-package.egg-link (link to .)
+
+Installed /home/ldy/space_y/ws_KRAC/build/launch_package
+running symlink_data
+creating /home/ldy/space_y/ws_KRAC/install/launch_package/share/ament_index
+creating /home/ldy/space_y/ws_KRAC/install/launch_package/share/ament_index/resource_index
+creating /home/ldy/space_y/ws_KRAC/install/launch_package/share/ament_index/resource_index/packages
+symbolically linking /home/ldy/space_y/ws_KRAC/build/launch_package/resource/launch_package -> /home/ldy/space_y/ws_KRAC/install/launch_package/share/ament_index/resource_index/packages
+symbolically linking /home/ldy/space_y/ws_KRAC/build/launch_package/package.xml -> /home/ldy/space_y/ws_KRAC/install/launch_package/share/launch_package
+creating /home/ldy/space_y/ws_KRAC/install/launch_package/share/launch_package/launch
+symbolically linking /home/ldy/space_y/ws_KRAC/build/launch_package/launch/autoland.launch.py -> /home/ldy/space_y/ws_KRAC/install/launch_package/share/launch_package/launch

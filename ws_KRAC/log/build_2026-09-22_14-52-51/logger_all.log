@@ -1,0 +1,199 @@
+[0.243s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.243s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=28, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7545d1f4be80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7545d1f04580>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7545d1f04580>>)
+[0.651s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.651s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.651s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.651s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.651s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.652s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.652s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ldy/space_y/ws_KRAC'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.652s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extensions ['ignore', 'ignore_ament_install']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extension 'ignore'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extension 'ignore_ament_install'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extensions ['colcon_pkg']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extension 'colcon_pkg'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extensions ['colcon_meta']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extension 'colcon_meta'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extensions ['ros']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/flight_control) by extension 'ros'
+[0.699s] DEBUG:colcon.colcon_core.package_identification:Package 'src/flight_control' with type 'ros.ament_cmake' and name 'flight_control'
+[0.699s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extensions ['ignore', 'ignore_ament_install']
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extension 'ignore'
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extension 'ignore_ament_install'
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extensions ['colcon_pkg']
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extension 'colcon_pkg'
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extensions ['colcon_meta']
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extension 'colcon_meta'
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extensions ['ros']
+[0.700s] Level 1:colcon.colcon_core.package_identification:_identify(src/imagery_processing) by extension 'ros'
+[0.701s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imagery_processing' with type 'ros.ament_python' and name 'imagery_processing'
+[0.701s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extensions ['ignore', 'ignore_ament_install']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extension 'ignore'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extension 'ignore_ament_install'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extensions ['colcon_pkg']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extension 'colcon_pkg'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extensions ['colcon_meta']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extension 'colcon_meta'
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extensions ['ros']
+[0.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/launch_package) by extension 'ros'
+[0.704s] DEBUG:colcon.colcon_core.package_identification:Package 'src/launch_package' with type 'ros.ament_python' and name 'launch_package'
+[0.704s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.705s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.705s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.705s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.705s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.786s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.786s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.791s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ldy/px4_ros_ws/install
+[0.792s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ldy/space_y/ws_KRAC/install
+[0.793s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ldy/ros2_px4_ws/install
+[0.796s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 288 installed packages in /opt/ros/humble
+[0.799s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_args' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_target' from command line to 'None'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.889s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.890s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.890s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.890s] Level 5:colcon.colcon_core.verb:set package 'flight_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.890s] DEBUG:colcon.colcon_core.verb:Building package 'flight_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ldy/space_y/ws_KRAC/build/flight_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ldy/space_y/ws_KRAC/install/flight_control', 'merge_install': False, 'path': '/home/ldy/space_y/ws_KRAC/src/flight_control', 'symlink_install': True, 'test_result_base': None}
+[0.891s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_args' from command line to 'None'
+[0.891s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_target' from command line to 'None'
+[0.891s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.891s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.891s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_clean_first' from command line to 'False'
+[0.892s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'cmake_force_configure' from command line to 'False'
+[0.892s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'ament_cmake_args' from command line to 'None'
+[0.892s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.892s] Level 5:colcon.colcon_core.verb:set package 'imagery_processing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.892s] DEBUG:colcon.colcon_core.verb:Building package 'imagery_processing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ldy/space_y/ws_KRAC/build/imagery_processing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ldy/space_y/ws_KRAC/install/imagery_processing', 'merge_install': False, 'path': '/home/ldy/space_y/ws_KRAC/src/imagery_processing', 'symlink_install': True, 'test_result_base': None}
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_args' from command line to 'None'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_target' from command line to 'None'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_clean_cache' from command line to 'False'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_clean_first' from command line to 'False'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'cmake_force_configure' from command line to 'False'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'ament_cmake_args' from command line to 'None'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'catkin_cmake_args' from command line to 'None'
+[0.893s] Level 5:colcon.colcon_core.verb:set package 'launch_package' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.893s] DEBUG:colcon.colcon_core.verb:Building package 'launch_package' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ldy/space_y/ws_KRAC/build/launch_package', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ldy/space_y/ws_KRAC/install/launch_package', 'merge_install': False, 'path': '/home/ldy/space_y/ws_KRAC/src/launch_package', 'symlink_install': True, 'test_result_base': None}
+[0.894s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.897s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.897s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ldy/space_y/ws_KRAC/src/flight_control' with build type 'ament_cmake'
+[0.897s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ldy/space_y/ws_KRAC/src/flight_control'
+[0.902s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.903s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.903s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.911s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ldy/space_y/ws_KRAC/src/imagery_processing' with build type 'ament_python'
+[0.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('imagery_processing', 'ament_prefix_path')
+[0.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/ament_prefix_path.ps1'
+[0.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/ament_prefix_path.dsv'
+[0.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/ament_prefix_path.sh'
+[0.918s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.918s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[1.509s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ldy/space_y/ws_KRAC/src/imagery_processing'
+[1.509s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.509s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.278s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: test, egg_info, install_headers, symlink_data, init_catalog, saveopts, upload_docs, bdist_egg, setopt, upload, bdist_wheel, build, bdist, dist_info, rotate, install_lib, check, develop, extract_messages, install_scripts, bdist_dumb, build_ext, compile_catalog, alias, easy_install, build_py, build_clib, register, install, install_data, update_catalog, bdist_rpm, build_scripts, clean, sdist, install_egg_info
+[2.914s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --optimize, --prefix, --dry-run, --multi-version, --verbose, --zip-ok, --no-find-links, --force-installation-into-system-dir, --allow-hosts, --install-dir, --install-layout, --build-directory, --user, --editable, --script-dir, --record, --local-snapshots-ok, --no-user-cfg, --find-links, --quiet, --version, --always-copy, --no-deps, --egg-path, --always-unzip, --upgrade, --index-url, --exclude-scripts, --site-dirs, --help, --uninstall
+[2.920s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build --no-deps symlink_data
+[3.940s] Level 1:colcon.colcon_core.shell:create_environment_hook('imagery_processing', 'pythonpath_develop')
+[3.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/build/imagery_processing/share/imagery_processing/hook/pythonpath_develop.ps1'
+[3.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing' returned '0': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build --no-deps symlink_data
+[3.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ldy/space_y/ws_KRAC/build/imagery_processing/share/imagery_processing/hook/pythonpath_develop.dsv'
+[3.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/build/imagery_processing/share/imagery_processing/hook/pythonpath_develop.sh'
+[3.951s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing' for CMake module files
+[3.952s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing' for CMake config files
+[3.954s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib'
+[3.954s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing/bin'
+[3.955s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/pkgconfig/imagery_processing.pc'
+[3.955s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages'
+[3.955s] Level 1:colcon.colcon_core.shell:create_environment_hook('imagery_processing', 'pythonpath')
+[3.956s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/pythonpath.ps1'
+[3.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/pythonpath.dsv'
+[3.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/hook/pythonpath.sh'
+[3.961s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/imagery_processing/bin'
+[3.961s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imagery_processing)
+[3.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/package.ps1'
+[3.965s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/package.dsv'
+[3.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/package.sh'
+[3.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/package.bash'
+[3.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/imagery_processing/package.zsh'
+[3.971s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ldy/space_y/ws_KRAC/install/imagery_processing/share/colcon-core/packages/imagery_processing)
+[15.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[15.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(flight_control)
+[15.736s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control' for CMake module files
+[15.737s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control' for CMake config files
+[15.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('flight_control', 'cmake_prefix_path')
+[15.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/hook/cmake_prefix_path.ps1'
+[15.740s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/hook/cmake_prefix_path.dsv'
+[15.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/hook/cmake_prefix_path.sh'
+[15.742s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control/lib'
+[15.742s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control/bin'
+[15.742s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control/lib/pkgconfig/flight_control.pc'
+[15.742s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control/lib/python3.10/site-packages'
+[15.743s] Level 1:colcon.colcon_core.environment:checking '/home/ldy/space_y/ws_KRAC/install/flight_control/bin'
+[15.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.ps1'
+[15.746s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.dsv'
+[15.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.sh'
+[15.748s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.bash'
+[15.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.zsh'
+[15.750s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ldy/space_y/ws_KRAC/install/flight_control/share/colcon-core/packages/flight_control)
+[15.760s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[15.761s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[15.761s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[15.761s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[15.774s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[15.774s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[15.774s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[15.795s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[15.796s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ldy/space_y/ws_KRAC/install/local_setup.ps1'
+[15.798s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ldy/space_y/ws_KRAC/install/_local_setup_util_ps1.py'
+[15.802s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ldy/space_y/ws_KRAC/install/setup.ps1'
+[15.805s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ldy/space_y/ws_KRAC/install/local_setup.sh'
+[15.807s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ldy/space_y/ws_KRAC/install/_local_setup_util_sh.py'
+[15.809s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ldy/space_y/ws_KRAC/install/setup.sh'
+[15.812s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ldy/space_y/ws_KRAC/install/local_setup.bash'
+[15.813s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ldy/space_y/ws_KRAC/install/setup.bash'
+[15.815s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ldy/space_y/ws_KRAC/install/local_setup.zsh'
+[15.817s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ldy/space_y/ws_KRAC/install/setup.zsh'

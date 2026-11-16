@@ -1,0 +1,29 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/landing_test_flight.dir/src/landing_test_flight.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/landing_test.dir/src/landing_test.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable landing_test_flight[0m
+[ 83%] [32m[1mLinking CXX executable landing_test_vel[0m
+[100%] [32m[1mLinking CXX executable landing_test[0m
+[100%] Built target landing_test_flight
+[100%] Built target landing_test_vel
+[100%] Built target landing_test
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_vel
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_flight
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/package_run_dependencies/flight_control
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/parent_prefix_path/flight_control
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.sh
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.sh
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.dsv
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.bash
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.sh
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.zsh
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.dsv
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.dsv
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/packages/flight_control
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig.cmake
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig-version.cmake
+-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.xml

@@ -1,0 +1,15 @@
+{
+  "csv": "logs/step4_20261117_012441_654437.csv",
+  "final_state": "DONE",
+  "armed": "False",
+  "landed": "True",
+  "duration_s": 61.102,
+  "yaw_change_deg": 89.9749393526899,
+  "movement_in_heading_frd_m": [
+    1.0219249877679788,
+    0.03439549709165249
+  ],
+  "return_horizontal_error_m": 0.04856380817292676,
+  "max_control_gap_s": 0.051606,
+  "failure": ""
+}

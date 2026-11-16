@@ -1,0 +1,518 @@
+[0.000000] (-) TimerEvent: {}
+[0.001153] (-) JobUnselected: {'identifier': 'imagery_processing'}
+[0.001726] (-) JobUnselected: {'identifier': 'launch_package'}
+[0.002182] (flight_control) JobQueued: {'identifier': 'flight_control', 'dependencies': OrderedDict()}
+[0.002384] (flight_control) JobStarted: {'identifier': 'flight_control'}
+[0.020042] (flight_control) JobProgress: {'identifier': 'flight_control', 'progress': 'cmake'}
+[0.021224] (flight_control) JobProgress: {'identifier': 'flight_control', 'progress': 'build'}
+[0.023118] (flight_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ldy/space_y/ws_KRAC/build/flight_control', '--', '-j28', '-l28'], 'cwd': '/home/ldy/space_y/ws_KRAC/build/flight_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ldy'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ldy/ros2_px4_ws/install/px4_ros_com/lib:/home/ldy/ros2_px4_ws/install/px4_msgs/lib:/home/ldy/ros2_px4_ws/install/microxrcedds_agent/lib:/home/ldy/px4_ros_ws/install/px4_ros_com/lib:/home/ldy/px4_ros_ws/install/px4_msgs/lib:/home/ldy/px4_ros_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ldy'), ('OLDPWD', '/home/ldy/space_y/ws_KRAC'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1803'), ('SYSTEMD_EXEC_PID', '1979'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11729'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ldy/px4_ros_ws/install:/home/ldy/space_y/ws_KRAC/install:/home/ldy/ros2_px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ldy'), ('JOURNAL_STREAM', '8:30885'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ldy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ldy/ros2_px4_ws/install/microxrcedds_agent/bin:/home/ldy/px4_ros_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/ldy/.local/bin:/home/ldy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/victus:@/tmp/.ICE-unix/1952,unix/victus:/tmp/.ICE-unix/1952'), ('INVOCATION_ID', '0ff3626040fb4ea694a371bac9c16ae9'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JZE7V3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:fb400dc3-2d18-4e58-a4d6-82f301300ee0'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ldy/space_y/ws_KRAC/build/flight_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ldy/space_y/ws_KRAC/build/launch_package:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/imagery_processing:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/ros2_px4_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/ros2_px4_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/ros2_px4_ws/install/microxrcedds_agent:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/microxrcedds_agent:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble')]), 'shell': False}
+[0.099413] (-) TimerEvent: {}
+[0.125525] (flight_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target landing_test_vel\x1b[0m\n'}
+[0.162359] (flight_control) StdoutLine: {'line': b'[ 33%] Built target landing_test_flight\n'}
+[0.164165] (flight_control) StdoutLine: {'line': b'[ 66%] Built target landing_test\n'}
+[0.178156] (flight_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o\x1b[0m\n'}
+[0.199552] (-) TimerEvent: {}
+[0.300177] (-) TimerEvent: {}
+[0.400738] (-) TimerEvent: {}
+[0.501451] (-) TimerEvent: {}
+[0.602117] (-) TimerEvent: {}
+[0.702771] (-) TimerEvent: {}
+[0.803492] (-) TimerEvent: {}
+[0.904155] (-) TimerEvent: {}
+[1.004863] (-) TimerEvent: {}
+[1.105506] (-) TimerEvent: {}
+[1.206291] (-) TimerEvent: {}
+[1.306824] (-) TimerEvent: {}
+[1.407550] (-) TimerEvent: {}
+[1.508358] (-) TimerEvent: {}
+[1.609276] (-) TimerEvent: {}
+[1.710064] (-) TimerEvent: {}
+[1.810768] (-) TimerEvent: {}
+[1.911532] (-) TimerEvent: {}
+[2.012268] (-) TimerEvent: {}
+[2.113124] (-) TimerEvent: {}
+[2.213729] (-) TimerEvent: {}
+[2.314568] (-) TimerEvent: {}
+[2.415329] (-) TimerEvent: {}
+[2.516131] (-) TimerEvent: {}
+[2.616898] (-) TimerEvent: {}
+[2.717496] (-) TimerEvent: {}
+[2.818140] (-) TimerEvent: {}
+[2.918684] (-) TimerEvent: {}
+[3.019325] (-) TimerEvent: {}
+[3.119962] (-) TimerEvent: {}
+[3.220472] (-) TimerEvent: {}
+[3.321024] (-) TimerEvent: {}
+[3.421536] (-) TimerEvent: {}
+[3.521982] (-) TimerEvent: {}
+[3.622365] (-) TimerEvent: {}
+[3.722904] (-) TimerEvent: {}
+[3.823412] (-) TimerEvent: {}
+[3.923900] (-) TimerEvent: {}
+[4.024310] (-) TimerEvent: {}
+[4.124882] (-) TimerEvent: {}
+[4.225433] (-) TimerEvent: {}
+[4.325845] (-) TimerEvent: {}
+[4.426350] (-) TimerEvent: {}
+[4.526802] (-) TimerEvent: {}
+[4.627442] (-) TimerEvent: {}
+[4.727951] (-) TimerEvent: {}
+[4.828752] (-) TimerEvent: {}
+[4.929207] (-) TimerEvent: {}
+[5.029639] (-) TimerEvent: {}
+[5.130169] (-) TimerEvent: {}
+[5.230684] (-) TimerEvent: {}
+[5.331217] (-) TimerEvent: {}
+[5.431702] (-) TimerEvent: {}
+[5.532179] (-) TimerEvent: {}
+[5.632632] (-) TimerEvent: {}
+[5.733253] (-) TimerEvent: {}
+[5.818670] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:187:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Karm\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.819927] (flight_control) StderrLine: {'line': b'  187 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::arm() {\n'}
+[5.820234] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.820459] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:194:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Kdisarm\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.820704] (flight_control) StderrLine: {'line': b'  194 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::disarm() {\n'}
+[5.820926] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.821136] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:201:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Kpublish_offboard_control_mode\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.821357] (flight_control) StderrLine: {'line': b'  201 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::publish_offboard_control_mode() {\n'}
+[5.821546] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.821763] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:212:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Kpublish_trajectory_setpoint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.822024] (flight_control) StderrLine: {'line': b'  212 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::publish_trajectory_setpoint() {\n'}
+[5.822247] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.822464] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:241:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Kland\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.822724] (flight_control) StderrLine: {'line': b'  241 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::land() {\n'}
+[5.822915] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.823331] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[KLandingTest::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[Kpublish_vehicle_command\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.823523] (flight_control) StderrLine: {'line': b'  319 | void \x1b[01;31m\x1b[KLandingTest\x1b[m\x1b[K::publish_vehicle_command(uint16_t command, float param1, float param2) {\n'}
+[5.823633] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.823751] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:339:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[5.823874] (flight_control) StderrLine: {'line': b'  339 | }\n'}
+[5.823986] (flight_control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.824093] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:22:41:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.824196] (flight_control) StderrLine: {'line': b'   22 | class LandingTest : public rclcpp::Node \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[5.824299] (flight_control) StderrLine: {'line': b'      |                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.833343] (-) TimerEvent: {}
+[5.838068] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLandingTest::LandingTest()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.838260] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:25:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kodom_sub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.838340] (flight_control) StderrLine: {'line': b'   25 |       \x1b[01;31m\x1b[Kodom_sub_\x1b[m\x1b[K = this->create_subscription<px4_msgs::msg::VehicleOdometry>("/fmu/out/vehicle_odometry", rclcpp::SensorDataQoS(),\n'}
+[5.838416] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.858395] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[5.859004] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:27:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurr_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.859257] (flight_control) StderrLine: {'line': b'   27 |              \x1b[01;31m\x1b[Kcurr_odom_\x1b[m\x1b[K = *msg;\n'}
+[5.859393] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.876809] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:28:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khas_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.877150] (flight_control) StderrLine: {'line': b'   28 |              \x1b[01;31m\x1b[Khas_odom_\x1b[m\x1b[K = true;\n'}
+[5.877277] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.933510] (-) TimerEvent: {}
+[5.970584] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLandingTest::LandingTest()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.970967] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:31:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klanded_sub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.971118] (flight_control) StderrLine: {'line': b'   31 |       \x1b[01;31m\x1b[Klanded_sub_\x1b[m\x1b[K = this->create_subscription<px4_msgs::msg::VehicleLandDetected>("/fmu/out/vehicle_land_detected", rclcpp::SensorDataQoS(),\n'}
+[5.971236] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.987590] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[5.987967] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:33:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klanded_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kland\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.988107] (flight_control) StderrLine: {'line': b'   33 |              \x1b[01;31m\x1b[Klanded_\x1b[m\x1b[K = msg->landed;\n'}
+[5.988205] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[5.988314] (flight_control) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kland\x1b[m\x1b[K\n'}
+[6.033664] (-) TimerEvent: {}
+[6.095431] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLandingTest::LandingTest()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.095919] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:36:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_setpoint_sub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.096093] (flight_control) StderrLine: {'line': b'   36 |       \x1b[01;31m\x1b[Kdesired_setpoint_sub_\x1b[m\x1b[K = this->create_subscription<geometry_msgs::msg::PointStamped>("/landing/coordinates", 10,\n'}
+[6.096216] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.121628] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[6.122169] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:38:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_x_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.122340] (flight_control) StderrLine: {'line': b'   38 |              \x1b[01;31m\x1b[Kdesired_x_\x1b[m\x1b[K = msg->point.x;\n'}
+[6.122493] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.133811] (-) TimerEvent: {}
+[6.137343] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:39:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_y_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.137613] (flight_control) StderrLine: {'line': b'   39 |              \x1b[01;31m\x1b[Kdesired_y_\x1b[m\x1b[K = msg->point.y;\n'}
+[6.137794] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.146282] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:40:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kacc_alt_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.146582] (flight_control) StderrLine: {'line': b'   40 |              \x1b[01;31m\x1b[Kacc_alt_\x1b[m\x1b[K = -msg->point.z;\n'}
+[6.146688] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.165468] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:41:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khave_alt_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.165963] (flight_control) StderrLine: {'line': b'   41 |              \x1b[01;31m\x1b[Khave_alt_\x1b[m\x1b[K  = std::isfinite(acc_alt_);\n'}
+[6.166136] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.233958] (-) TimerEvent: {}
+[6.270361] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLandingTest::LandingTest()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.270670] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:46:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koffboard_control_mode_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.270815] (flight_control) StderrLine: {'line': b'   46 |       \x1b[01;31m\x1b[Koffboard_control_mode_publisher_\x1b[m\x1b[K = this->create_publisher<OffboardControlMode>("/fmu/in/offboard_control_mode", 10);\n'}
+[6.270940] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.307039] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:47:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.307383] (flight_control) StderrLine: {'line': b'   47 |       \x1b[01;31m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);\n'}
+[6.307607] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.334152] (-) TimerEvent: {}
+[6.344004] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:48:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvehicle_command_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.344417] (flight_control) StderrLine: {'line': b'   48 |       \x1b[01;31m\x1b[Kvehicle_command_publisher_\x1b[m\x1b[K = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);\n'}
+[6.344578] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.362370] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[6.362654] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:52:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khas_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.362782] (flight_control) StderrLine: {'line': b'   52 |         if (!\x1b[01;31m\x1b[Khas_odom_\x1b[m\x1b[K)\n'}
+[6.362887] (flight_control) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.381757] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:58:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdescent_vel_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.382205] (flight_control) StderrLine: {'line': b'   58 |         \x1b[01;31m\x1b[Kdescent_vel_\x1b[m\x1b[K =\n'}
+[6.382358] (flight_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.408776] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:62:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.409100] (flight_control) StderrLine: {'line': b'   62 |         if (\x1b[01;31m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K == 10)\n'}
+[6.409217] (flight_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.428470] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:79:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmission_mode_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.428829] (flight_control) StderrLine: {'line': b'   79 |         if (\x1b[01;31m\x1b[Kmission_mode_\x1b[m\x1b[K == LANDING)\n'}
+[6.429015] (flight_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.434229] (-) TimerEvent: {}
+[6.440975] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:79:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLANDING\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.441239] (flight_control) StderrLine: {'line': b'   79 |         if (mission_mode_ == \x1b[01;31m\x1b[KLANDING\x1b[m\x1b[K)\n'}
+[6.441331] (flight_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.455668] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:82:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khave_alt_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.455983] (flight_control) StderrLine: {'line': b'   82 |           if (\x1b[01;31m\x1b[Khave_alt_\x1b[m\x1b[K)\n'}
+[6.456114] (flight_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.456378] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:105:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K\xe2\x80\x99 is not captured\n'}
+[6.456496] (flight_control) StderrLine: {'line': b'  105 |             \x1b[01;31m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K->publish(msg);\n'}
+[6.456598] (flight_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.456711] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:50:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kthe lambda has no capture-default\n'}
+[6.456818] (flight_control) StderrLine: {'line': b'   50 |       auto timer_callback = [this\x1b[01;36m\x1b[K]\x1b[m\x1b[K() -> void\n'}
+[6.456950] (flight_control) StderrLine: {'line': b'      |                                  \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.457050] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:47:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K<typeprefixerror>trajectory_setpoint_publisher_\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[6.457154] (flight_control) StderrLine: {'line': b'   47 |       \x1b[01;36m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);\n'}
+[6.457253] (flight_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.474032] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:115:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KFINISHED\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.474282] (flight_control) StderrLine: {'line': b'  115 |         else if (mission_mode_ == \x1b[01;31m\x1b[KFINISHED\x1b[m\x1b[K)\n'}
+[6.474400] (flight_control) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.486715] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:118:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klanded_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kland\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.487126] (flight_control) StderrLine: {'line': b'  118 |           if (\x1b[01;31m\x1b[Klanded_\x1b[m\x1b[K && armed_)\n'}
+[6.487298] (flight_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.487451] (flight_control) StderrLine: {'line': b'      |               \x1b[32m\x1b[Kland\x1b[m\x1b[K\n'}
+[6.498608] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:118:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Karmed_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.498963] (flight_control) StderrLine: {'line': b'  118 |           if (landed_ && \x1b[01;31m\x1b[Karmed_\x1b[m\x1b[K)\n'}
+[6.499156] (flight_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.512439] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:123:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Karmed_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.512858] (flight_control) StderrLine: {'line': b'  123 |           if (!\x1b[01;31m\x1b[Karmed_\x1b[m\x1b[K)\n'}
+[6.513084] (flight_control) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.534382] (-) TimerEvent: {}
+[6.543416] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:130:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.543799] (flight_control) StderrLine: {'line': b'  130 |         if (\x1b[01;31m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K < 11)\n'}
+[6.543959] (flight_control) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.544453] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KLandingTest::LandingTest()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.544965] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:136:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.545212] (flight_control) StderrLine: {'line': b'  136 |     \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[6.545429] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.556346] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:138:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktimestamp_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.557264] (flight_control) StderrLine: {'line': b'  138 |       std::atomic<uint64_t> \x1b[01;35m\x1b[Ktimestamp_\x1b[m\x1b[K;\n'}
+[6.557418] (flight_control) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.557544] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:156:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Khas_odom_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.557692] (flight_control) StderrLine: {'line': b'  156 |     bool \x1b[01;35m\x1b[Khas_odom_\x1b[m\x1b[K = false;\n'}
+[6.557827] (flight_control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.557937] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:157:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Karmed_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.558077] (flight_control) StderrLine: {'line': b'  157 |     bool \x1b[01;35m\x1b[Karmed_\x1b[m\x1b[K = false;\n'}
+[6.558194] (flight_control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.558305] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:158:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Klanded_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.558468] (flight_control) StderrLine: {'line': b'  158 |     bool \x1b[01;35m\x1b[Klanded_\x1b[m\x1b[K = false;\n'}
+[6.558575] (flight_control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.558747] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:159:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Khave_alt_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.558880] (flight_control) StderrLine: {'line': b'  159 |     bool \x1b[01;35m\x1b[Khave_alt_\x1b[m\x1b[K = false;\n'}
+[6.559007] (flight_control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.559109] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:161:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Khold_counter_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.559241] (flight_control) StderrLine: {'line': b'  161 |     int \x1b[01;35m\x1b[Khold_counter_\x1b[m\x1b[K = 0;\n'}
+[6.559343] (flight_control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.559445] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:162:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KHOLD_THRESHOLD\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.559631] (flight_control) StderrLine: {'line': b'  162 |     int \x1b[01;35m\x1b[KHOLD_THRESHOLD\x1b[m\x1b[K = 20;\n'}
+[6.559851] (flight_control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.560015] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:174:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.560169] (flight_control) StderrLine: {'line': b'  174 |     int \x1b[01;35m\x1b[Koffboard_setpoint_counter_\x1b[m\x1b[K = 0;\n'}
+[6.560282] (flight_control) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.560385] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:176:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdesired_x_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.560495] (flight_control) StderrLine: {'line': b'  176 |     float \x1b[01;35m\x1b[Kdesired_x_\x1b[m\x1b[K = 0.0f;\n'}
+[6.560598] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.560771] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:177:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdesired_y_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.560891] (flight_control) StderrLine: {'line': b'  177 |     float \x1b[01;35m\x1b[Kdesired_y_\x1b[m\x1b[K = 0.0f;\n'}
+[6.560991] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.561092] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:178:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kacc_alt_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.561191] (flight_control) StderrLine: {'line': b'  178 |     float \x1b[01;35m\x1b[Kacc_alt_\x1b[m\x1b[K = 0.0f;\n'}
+[6.561280] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.561375] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:180:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Klow_enough_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.561480] (flight_control) StderrLine: {'line': b'  180 |     float \x1b[01;35m\x1b[Klow_enough_\x1b[m\x1b[K = -0.5f;\n'}
+[6.561576] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.561705] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:181:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdescent_vel_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.561866] (flight_control) StderrLine: {'line': b'  181 |     float \x1b[01;35m\x1b[Kdescent_vel_\x1b[m\x1b[K = 0.0f;\n'}
+[6.562013] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.562141] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:182:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kiter_ratio_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.562295] (flight_control) StderrLine: {'line': b'  182 |     float \x1b[01;35m\x1b[Kiter_ratio_\x1b[m\x1b[K = 0.2f;\n'}
+[6.562430] (flight_control) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.562569] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:184:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kmission_mode_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.562792] (flight_control) StderrLine: {'line': b'  184 |     Mission \x1b[01;35m\x1b[Kmission_mode_\x1b[m\x1b[K = LANDING;\n'}
+[6.562940] (flight_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.634528] (-) TimerEvent: {}
+[6.735181] (-) TimerEvent: {}
+[6.835721] (-) TimerEvent: {}
+[6.936222] (-) TimerEvent: {}
+[7.036926] (-) TimerEvent: {}
+[7.052186] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::arm()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.052766] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:188:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KLandingTest::publish_vehicle_command(const uint16_t&, double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.053131] (flight_control) StderrLine: {'line': b'  188 |   \x1b[01;31m\x1b[Kpublish_vehicle_command(VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 1.0)\x1b[m\x1b[K;\n'}
+[7.053277] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.053410] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.053535] (flight_control) StderrLine: {'line': b'  319 | void \x1b[01;36m\x1b[KLandingTest\x1b[m\x1b[K::publish_vehicle_command(uint16_t command, float param1, float param2) {\n'}
+[7.053671] (flight_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.053808] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[7.067413] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:191:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Karmed_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.067839] (flight_control) StderrLine: {'line': b'  191 |   \x1b[01;31m\x1b[Karmed_\x1b[m\x1b[K = true;\n'}
+[7.067981] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.068102] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::disarm()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.068210] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:195:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KLandingTest::publish_vehicle_command(const uint16_t&, double)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.068318] (flight_control) StderrLine: {'line': b'  195 |   \x1b[01;31m\x1b[Kpublish_vehicle_command(VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 0.0)\x1b[m\x1b[K;\n'}
+[7.068419] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.068521] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.068622] (flight_control) StderrLine: {'line': b'  319 | void \x1b[01;36m\x1b[KLandingTest\x1b[m\x1b[K::publish_vehicle_command(uint16_t command, float param1, float param2) {\n'}
+[7.068734] (flight_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.068842] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 2 provided\n'}
+[7.080921] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:198:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Karmed_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.081044] (flight_control) StderrLine: {'line': b'  198 |   \x1b[01;31m\x1b[Karmed_\x1b[m\x1b[K = false;\n'}
+[7.081098] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.096409] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_offboard_control_mode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.096693] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:203:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmission_mode_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.096834] (flight_control) StderrLine: {'line': b'  203 |   msg.position = \x1b[01;31m\x1b[Kmission_mode_\x1b[m\x1b[K == LANDING? false:true;\n'}
+[7.096935] (flight_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.112949] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:203:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLANDING\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.113339] (flight_control) StderrLine: {'line': b'  203 |   msg.position = mission_mode_ == \x1b[01;31m\x1b[KLANDING\x1b[m\x1b[K? false:true;\n'}
+[7.113555] (flight_control) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.137140] (-) TimerEvent: {}
+[7.147791] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:209:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koffboard_control_mode_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.148182] (flight_control) StderrLine: {'line': b'  209 |   \x1b[01;31m\x1b[Koffboard_control_mode_publisher_\x1b[m\x1b[K->publish(msg);\n'}
+[7.148354] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.167195] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_trajectory_setpoint()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.167628] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:213:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurr_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.167804] (flight_control) StderrLine: {'line': b'  213 |   if(\x1b[01;31m\x1b[Kcurr_odom_\x1b[m\x1b[K.timestamp == 0) {\n'}
+[7.167937] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.204067] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:220:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurr_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.204631] (flight_control) StderrLine: {'line': b'  220 |   Eigen::Vector3f current(\x1b[01;31m\x1b[Kcurr_odom_\x1b[m\x1b[K.position[0], curr_odom_.position[1], curr_odom_.position[2]);\n'}
+[7.204896] (flight_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.237447] (-) TimerEvent: {}
+[7.239179] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:228:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khold_counter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.239609] (flight_control) StderrLine: {'line': b'  228 |     \x1b[01;31m\x1b[Khold_counter_\x1b[m\x1b[K ++;\n'}
+[7.239869] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.257179] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:230:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KHOLD_THRESHOLD\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.257378] (flight_control) StderrLine: {'line': b'  230 |     if(hold_counter_ > \x1b[01;31m\x1b[KHOLD_THRESHOLD\x1b[m\x1b[K) {\n'}
+[7.257508] (flight_control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.273162] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:232:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmission_mode_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.273682] (flight_control) StderrLine: {'line': b'  232 |       \x1b[01;31m\x1b[Kmission_mode_\x1b[m\x1b[K = LANDING;\n'}
+[7.273901] (flight_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.286189] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:232:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLANDING\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.286491] (flight_control) StderrLine: {'line': b'  232 |       mission_mode_ = \x1b[01;31m\x1b[KLANDING\x1b[m\x1b[K;\n'}
+[7.286701] (flight_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.314141] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:238:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.314542] (flight_control) StderrLine: {'line': b'  238 |   \x1b[01;31m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K->publish(msg);\n'}
+[7.314778] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.328480] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::land()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.328916] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:242:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khas_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.329140] (flight_control) StderrLine: {'line': b'  242 |   if (!\x1b[01;31m\x1b[Khas_odom_\x1b[m\x1b[K) {\n'}
+[7.329337] (flight_control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.337552] (-) TimerEvent: {}
+[7.346612] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:246:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khave_alt_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.346942] (flight_control) StderrLine: {'line': b'  246 |   if (!\x1b[01;31m\x1b[Khave_alt_\x1b[m\x1b[K) {\n'}
+[7.347172] (flight_control) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.365066] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:252:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurr_odom_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.365682] (flight_control) StderrLine: {'line': b'  252 |   Eigen::Quaternionf q(\x1b[01;31m\x1b[Kcurr_odom_\x1b[m\x1b[K.q[0], curr_odom_.q[1], curr_odom_.q[2], curr_odom_.q[3]);\n'}
+[7.365966] (flight_control) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.384140] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kiter_ratio_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.384612] (flight_control) StderrLine: {'line': b'  257 |   \x1b[01;31m\x1b[Kiter_ratio_\x1b[m\x1b[K = descent_vel_*acc_alt_*0.15;\n'}
+[7.384891] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.400559] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdescent_vel_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.400907] (flight_control) StderrLine: {'line': b'  257 |   iter_ratio_ = \x1b[01;31m\x1b[Kdescent_vel_\x1b[m\x1b[K*acc_alt_*0.15;\n'}
+[7.401121] (flight_control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.413726] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kacc_alt_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.414105] (flight_control) StderrLine: {'line': b'  257 |   iter_ratio_ = descent_vel_*\x1b[01;31m\x1b[Kacc_alt_\x1b[m\x1b[K*0.15;\n'}
+[7.414266] (flight_control) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.433175] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_x_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.433493] (flight_control) StderrLine: {'line': b'  261 |   if(\x1b[01;31m\x1b[Kdesired_x_\x1b[m\x1b[K != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0};\n'}
+[7.433691] (flight_control) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.437665] (-) TimerEvent: {}
+[7.446926] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_y_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.447333] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || \x1b[01;31m\x1b[Kdesired_y_\x1b[m\x1b[K != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0};\n'}
+[7.447477] (flight_control) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.447609] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KEigen::Vector3f\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 3, 1>\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.447916] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0\x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.448473] (flight_control) StderrLine: {'line': b'      |                                                                                         \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.448586] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[7.448749] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.448884] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.449016] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.449143] (flight_control) StderrLine: {'line': b'  223 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const DenseBase<OtherDerived>& other)\n'}
+[7.449251] (flight_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.449355] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.449448] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KOtherDerived\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.449561] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0\x1b[01;36m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.449682] (flight_control) StderrLine: {'line': b'      |                                                                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.449830] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[7.449949] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.450053] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.450154] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.450269] (flight_control) StderrLine: {'line': b'  236 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const EigenBase<OtherDerived> &other)\n'}
+[7.450373] (flight_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.450481] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.450571] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KOtherDerived\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.450669] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0\x1b[01;36m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.450771] (flight_control) StderrLine: {'line': b'      |                                                                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.450874] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[7.450997] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.451109] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.451232] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.451347] (flight_control) StderrLine: {'line': b'  243 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const ReturnByValue<OtherDerived>& func)\n'}
+[7.451451] (flight_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.451551] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.451681] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KOtherDerived\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.451802] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0\x1b[01;36m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.451936] (flight_control) StderrLine: {'line': b'      |                                                                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.452048] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[7.452154] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.452256] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.452359] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.452488] (flight_control) StderrLine: {'line': b'  438 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);\n'}
+[7.452612] (flight_control) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.452754] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[7.452884] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KOtherDerived\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.453045] (flight_control) StderrLine: {'line': b'  261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0\x1b[01;36m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.453173] (flight_control) StderrLine: {'line': b'      |                                                                                         \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[7.453297] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:295\x1b[m\x1b[K,\n'}
+[7.453412] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.453543] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.453721] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.453886] (flight_control) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const Matrix& other)\n'}
+[7.454020] (flight_control) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.454153] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Matrix<float, 3, 1>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.454304] (flight_control) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& operator=(\x1b[01;36m\x1b[Kconst Matrix& other\x1b[m\x1b[K)\n'}
+[7.454422] (flight_control) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[7.454537] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.454673] (flight_control) StderrLine: {'line': b'  279 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[7.454796] (flight_control) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.454912] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<float, 3, 1>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.455025] (flight_control) StderrLine: {'line': b'  279 |     Matrix& operator=(\x1b[01;36m\x1b[KMatrix&& other\x1b[m\x1b[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[7.455135] (flight_control) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[7.471578] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:266:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klow_enough_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.472023] (flight_control) StderrLine: {'line': b'  266 |   if (acc_alt_ > \x1b[01;31m\x1b[Klow_enough_\x1b[m\x1b[K)\n'}
+[7.472163] (flight_control) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.491098] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:268:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmission_mode_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.491391] (flight_control) StderrLine: {'line': b'  268 |     \x1b[01;31m\x1b[Kmission_mode_\x1b[m\x1b[K = FINISHED;\n'}
+[7.491570] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.506381] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:268:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KFINISHED\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.506835] (flight_control) StderrLine: {'line': b'  268 |     mission_mode_ = \x1b[01;31m\x1b[KFINISHED\x1b[m\x1b[K;\n'}
+[7.507060] (flight_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.507178] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:270:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KLandingTest::publish_vehicle_command(const uint16_t&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.507298] (flight_control) StderrLine: {'line': b'  270 |     \x1b[01;31m\x1b[Kpublish_vehicle_command(\x1b[m\x1b[K\n'}
+[7.507404] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[7.507523] (flight_control) StderrLine: {'line': b'  271 | \x1b[01;31m\x1b[K        px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND)\x1b[m\x1b[K;\n'}
+[7.507640] (flight_control) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.507755] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.507858] (flight_control) StderrLine: {'line': b'  319 | void \x1b[01;36m\x1b[KLandingTest\x1b[m\x1b[K::publish_vehicle_command(uint16_t command, float param1, float param2) {\n'}
+[7.507949] (flight_control) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.508041] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 1 provided\n'}
+[7.525582] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:285:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_x_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.526216] (flight_control) StderrLine: {'line': b'  285 |     \x1b[01;31m\x1b[Kdesired_x_\x1b[m\x1b[K * desired_x_ +\n'}
+[7.526502] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.537880] (-) TimerEvent: {}
+[7.542023] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:286:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdesired_y_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.542369] (flight_control) StderrLine: {'line': b'  286 |     \x1b[01;31m\x1b[Kdesired_y_\x1b[m\x1b[K * desired_y_\n'}
+[7.542552] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.543440] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:308:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >::_velocity_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 3>\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[7.543813] (flight_control) StderrLine: {'line': b'  308 |     \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[7.543987] (flight_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.544088] (flight_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/tuple:39\x1b[m\x1b[K,\n'}
+[7.544188] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/functional:54\x1b[m\x1b[K,\n'}
+[7.544284] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:85\x1b[m\x1b[K,\n'}
+[7.544374] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[7.544459] (flight_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6\x1b[m\x1b[K:\n'}
+[7.544544] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/array:95:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 3>& std::array<float, 3>::operator=(const std::array<float, 3>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.544665] (flight_control) StderrLine: {'line': b'   95 |     struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K\n'}
+[7.544767] (flight_control) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.544863] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/array:95:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<float, 3>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.544969] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/array:95:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::array<float, 3>& std::array<float, 3>::operator=(std::array<float, 3>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.545068] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/array:95:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::array<float, 3>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.584196] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:316:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.584684] (flight_control) StderrLine: {'line': b'  316 |   \x1b[01;31m\x1b[Ktrajectory_setpoint_publisher_\x1b[m\x1b[K->publish(msg);\n'}
+[7.584851] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.615319] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.615660] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:328:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvehicle_command_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.615778] (flight_control) StderrLine: {'line': b'  328 |   \x1b[01;31m\x1b[Kvehicle_command_publisher_\x1b[m\x1b[K->publish(msg);\n'}
+[7.615895] (flight_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.620733] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:\x1b[m\x1b[K At global scope:\n'}
+[7.621094] (flight_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:339:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[7.621225] (flight_control) StderrLine: {'line': b'  339 | }\n'}
+[7.621384] (flight_control) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[7.637979] (-) TimerEvent: {}
+[7.738408] (-) TimerEvent: {}
+[7.838894] (-) TimerEvent: {}
+[7.939404] (-) TimerEvent: {}
+[8.039978] (-) TimerEvent: {}
+[8.140669] (-) TimerEvent: {}
+[8.241121] (-) TimerEvent: {}
+[8.341499] (-) TimerEvent: {}
+[8.441896] (-) TimerEvent: {}
+[8.542457] (-) TimerEvent: {}
+[8.642859] (-) TimerEvent: {}
+[8.743332] (-) TimerEvent: {}
+[8.843832] (-) TimerEvent: {}
+[8.944380] (-) TimerEvent: {}
+[9.044940] (-) TimerEvent: {}
+[9.145791] (-) TimerEvent: {}
+[9.246457] (-) TimerEvent: {}
+[9.347096] (-) TimerEvent: {}
+[9.447768] (-) TimerEvent: {}
+[9.548606] (-) TimerEvent: {}
+[9.649239] (-) TimerEvent: {}
+[9.749779] (-) TimerEvent: {}
+[9.850329] (-) TimerEvent: {}
+[9.950887] (-) TimerEvent: {}
+[10.051589] (-) TimerEvent: {}
+[10.152253] (-) TimerEvent: {}
+[10.252737] (-) TimerEvent: {}
+[10.353246] (-) TimerEvent: {}
+[10.453715] (-) TimerEvent: {}
+[10.554187] (-) TimerEvent: {}
+[10.654629] (-) TimerEvent: {}
+[10.755188] (-) TimerEvent: {}
+[10.855996] (-) TimerEvent: {}
+[10.956925] (-) TimerEvent: {}
+[11.057457] (-) TimerEvent: {}
+[11.158097] (-) TimerEvent: {}
+[11.258767] (-) TimerEvent: {}
+[11.359447] (-) TimerEvent: {}
+[11.460061] (-) TimerEvent: {}
+[11.560753] (-) TimerEvent: {}
+[11.661383] (-) TimerEvent: {}
+[11.762149] (-) TimerEvent: {}
+[11.862848] (-) TimerEvent: {}
+[11.963408] (-) TimerEvent: {}
+[12.063890] (-) TimerEvent: {}
+[12.164474] (-) TimerEvent: {}
+[12.265056] (-) TimerEvent: {}
+[12.365913] (-) TimerEvent: {}
+[12.466458] (-) TimerEvent: {}
+[12.566835] (-) TimerEvent: {}
+[12.667338] (-) TimerEvent: {}
+[12.767866] (-) TimerEvent: {}
+[12.868312] (-) TimerEvent: {}
+[12.968823] (-) TimerEvent: {}
+[13.069279] (-) TimerEvent: {}
+[13.169754] (-) TimerEvent: {}
+[13.270241] (-) TimerEvent: {}
+[13.370873] (-) TimerEvent: {}
+[13.471403] (-) TimerEvent: {}
+[13.571938] (-) TimerEvent: {}
+[13.672473] (-) TimerEvent: {}
+[13.772892] (-) TimerEvent: {}
+[13.873362] (-) TimerEvent: {}
+[13.974042] (-) TimerEvent: {}
+[14.074800] (-) TimerEvent: {}
+[14.175451] (-) TimerEvent: {}
+[14.276121] (-) TimerEvent: {}
+[14.376750] (-) TimerEvent: {}
+[14.477578] (-) TimerEvent: {}
+[14.578250] (-) TimerEvent: {}
+[14.679054] (-) TimerEvent: {}
+[14.779730] (-) TimerEvent: {}
+[14.880342] (-) TimerEvent: {}
+[14.980940] (-) TimerEvent: {}
+[15.076564] (flight_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/landing_test_vel.dir/build.make:76: CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o] Error 1\n'}
+[15.077309] (flight_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/landing_test_vel.dir/all] Error 2\n'}
+[15.077584] (flight_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[15.080991] (-) TimerEvent: {}
+[15.083482] (flight_control) CommandEnded: {'returncode': 2}
+[15.108099] (flight_control) JobEnded: {'identifier': 'flight_control', 'rc': 2}
+[15.119370] (-) EventReactorShutdown: {}

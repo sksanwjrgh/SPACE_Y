@@ -1,0 +1,359 @@
+[0.027s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[0.124s] [35m[1mConsolidate compiler generated dependencies of target landing_test_vel[0m
+[0.160s] [ 33%] Built target landing_test_flight
+[0.162s] [ 66%] Built target landing_test
+[0.176s] [ 83%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m
+[5.817s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:187:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Karm[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.818s]   187 | void [01;31m[KLandingTest[m[K::arm() {
+[5.818s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.818s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:194:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Kdisarm[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.818s]   194 | void [01;31m[KLandingTest[m[K::disarm() {
+[5.819s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.819s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:201:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Kpublish_offboard_control_mode[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.819s]   201 | void [01;31m[KLandingTest[m[K::publish_offboard_control_mode() {
+[5.819s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.820s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:212:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Kpublish_trajectory_setpoint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.820s]   212 | void [01;31m[KLandingTest[m[K::publish_trajectory_setpoint() {
+[5.820s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.820s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:241:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Kland[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.820s]   241 | void [01;31m[KLandingTest[m[K::land() {
+[5.821s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.821s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLandingTest::[m[K’ on member ‘[01m[Kpublish_vehicle_command[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.821s]   319 | void [01;31m[KLandingTest[m[K::publish_vehicle_command(uint16_t command, float param1, float param2) {
+[5.821s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.821s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:339:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[5.822s]   339 | }
+[5.822s]       |  [01;31m[K^[m[K
+[5.822s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:22:41:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[5.822s]    22 | class LandingTest : public rclcpp::Node [01;36m[K{[m[K
+[5.822s]       |                                         [01;36m[K^[m[K
+[5.836s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In constructor ‘[01m[KLandingTest::LandingTest()[m[K’:
+[5.836s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:25:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_sub_[m[K’ was not declared in this scope
+[5.836s]    25 |       [01;31m[Kodom_sub_[m[K = this->create_subscription<px4_msgs::msg::VehicleOdometry>("/fmu/out/vehicle_odometry", rclcpp::SensorDataQoS(),
+[5.836s]       |       [01;31m[K^~~~~~~~~[m[K
+[5.856s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In lambda function:
+[5.857s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:27:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurr_odom_[m[K’ was not declared in this scope
+[5.857s]    27 |              [01;31m[Kcurr_odom_[m[K = *msg;
+[5.857s]       |              [01;31m[K^~~~~~~~~~[m[K
+[5.875s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:28:14:[m[K [01;31m[Kerror: [m[K‘[01m[Khas_odom_[m[K’ was not declared in this scope
+[5.875s]    28 |              [01;31m[Khas_odom_[m[K = true;
+[5.875s]       |              [01;31m[K^~~~~~~~~[m[K
+[5.968s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In constructor ‘[01m[KLandingTest::LandingTest()[m[K’:
+[5.969s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:31:7:[m[K [01;31m[Kerror: [m[K‘[01m[Klanded_sub_[m[K’ was not declared in this scope
+[5.969s]    31 |       [01;31m[Klanded_sub_[m[K = this->create_subscription<px4_msgs::msg::VehicleLandDetected>("/fmu/out/vehicle_land_detected", rclcpp::SensorDataQoS(),
+[5.969s]       |       [01;31m[K^~~~~~~~~~~[m[K
+[5.985s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In lambda function:
+[5.986s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:33:14:[m[K [01;31m[Kerror: [m[K‘[01m[Klanded_[m[K’ was not declared in this scope; did you mean ‘[01m[Kland[m[K’?
+[5.986s]    33 |              [01;31m[Klanded_[m[K = msg->landed;
+[5.986s]       |              [01;31m[K^~~~~~~[m[K
+[5.986s]       |              [32m[Kland[m[K
+[6.093s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In constructor ‘[01m[KLandingTest::LandingTest()[m[K’:
+[6.094s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:36:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_setpoint_sub_[m[K’ was not declared in this scope
+[6.094s]    36 |       [01;31m[Kdesired_setpoint_sub_[m[K = this->create_subscription<geometry_msgs::msg::PointStamped>("/landing/coordinates", 10,
+[6.094s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[6.120s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In lambda function:
+[6.120s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:38:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_x_[m[K’ was not declared in this scope
+[6.120s]    38 |              [01;31m[Kdesired_x_[m[K = msg->point.x;
+[6.120s]       |              [01;31m[K^~~~~~~~~~[m[K
+[6.135s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:39:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_y_[m[K’ was not declared in this scope
+[6.135s]    39 |              [01;31m[Kdesired_y_[m[K = msg->point.y;
+[6.135s]       |              [01;31m[K^~~~~~~~~~[m[K
+[6.144s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:40:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kacc_alt_[m[K’ was not declared in this scope
+[6.144s]    40 |              [01;31m[Kacc_alt_[m[K = -msg->point.z;
+[6.144s]       |              [01;31m[K^~~~~~~~[m[K
+[6.163s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:41:14:[m[K [01;31m[Kerror: [m[K‘[01m[Khave_alt_[m[K’ was not declared in this scope
+[6.164s]    41 |              [01;31m[Khave_alt_[m[K  = std::isfinite(acc_alt_);
+[6.164s]       |              [01;31m[K^~~~~~~~~[m[K
+[6.268s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In constructor ‘[01m[KLandingTest::LandingTest()[m[K’:
+[6.268s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:46:7:[m[K [01;31m[Kerror: [m[K‘[01m[Koffboard_control_mode_publisher_[m[K’ was not declared in this scope
+[6.268s]    46 |       [01;31m[Koffboard_control_mode_publisher_[m[K = this->create_publisher<OffboardControlMode>("/fmu/in/offboard_control_mode", 10);
+[6.269s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.305s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:47:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_setpoint_publisher_[m[K’ was not declared in this scope
+[6.305s]    47 |       [01;31m[Ktrajectory_setpoint_publisher_[m[K = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);
+[6.305s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.342s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:48:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvehicle_command_publisher_[m[K’ was not declared in this scope
+[6.342s]    48 |       [01;31m[Kvehicle_command_publisher_[m[K = this->create_publisher<VehicleCommand>("/fmu/in/vehicle_command", 10);
+[6.342s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.360s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In lambda function:
+[6.360s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:52:14:[m[K [01;31m[Kerror: [m[K‘[01m[Khas_odom_[m[K’ was not declared in this scope
+[6.360s]    52 |         if (![01;31m[Khas_odom_[m[K)
+[6.361s]       |              [01;31m[K^~~~~~~~~[m[K
+[6.380s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:58:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdescent_vel_[m[K’ was not declared in this scope
+[6.380s]    58 |         [01;31m[Kdescent_vel_[m[K =
+[6.380s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[6.407s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:62:13:[m[K [01;31m[Kerror: [m[K‘[01m[Koffboard_setpoint_counter_[m[K’ was not declared in this scope
+[6.407s]    62 |         if ([01;31m[Koffboard_setpoint_counter_[m[K == 10)
+[6.407s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.426s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:79:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmission_mode_[m[K’ was not declared in this scope
+[6.427s]    79 |         if ([01;31m[Kmission_mode_[m[K == LANDING)
+[6.427s]       |             [01;31m[K^~~~~~~~~~~~~[m[K
+[6.439s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:79:30:[m[K [01;31m[Kerror: [m[K‘[01m[KLANDING[m[K’ was not declared in this scope
+[6.439s]    79 |         if (mission_mode_ == [01;31m[KLANDING[m[K)
+[6.439s]       |                              [01;31m[K^~~~~~~[m[K
+[6.453s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:82:15:[m[K [01;31m[Kerror: [m[K‘[01m[Khave_alt_[m[K’ was not declared in this scope
+[6.454s]    82 |           if ([01;31m[Khave_alt_[m[K)
+[6.454s]       |               [01;31m[K^~~~~~~~~[m[K
+[6.454s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:105:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_setpoint_publisher_[m[K’ is not captured
+[6.454s]   105 |             [01;31m[Ktrajectory_setpoint_publisher_[m[K->publish(msg);
+[6.454s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.454s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:50:34:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+[6.454s]    50 |       auto timer_callback = [this[01;36m[K][m[K() -> void
+[6.455s]       |                                  [01;36m[K^[m[K
+[6.455s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:47:7:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>trajectory_setpoint_publisher_[m[K’ declared here
+[6.455s]    47 |       [01;36m[Ktrajectory_setpoint_publisher_[m[K = this->create_publisher<TrajectorySetpoint>("/fmu/in/trajectory_setpoint", 10);
+[6.455s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.472s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:115:35:[m[K [01;31m[Kerror: [m[K‘[01m[KFINISHED[m[K’ was not declared in this scope
+[6.472s]   115 |         else if (mission_mode_ == [01;31m[KFINISHED[m[K)
+[6.472s]       |                                   [01;31m[K^~~~~~~~[m[K
+[6.485s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:118:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klanded_[m[K’ was not declared in this scope; did you mean ‘[01m[Kland[m[K’?
+[6.485s]   118 |           if ([01;31m[Klanded_[m[K && armed_)
+[6.485s]       |               [01;31m[K^~~~~~~[m[K
+[6.485s]       |               [32m[Kland[m[K
+[6.496s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:118:26:[m[K [01;31m[Kerror: [m[K‘[01m[Karmed_[m[K’ was not declared in this scope
+[6.497s]   118 |           if (landed_ && [01;31m[Karmed_[m[K)
+[6.497s]       |                          [01;31m[K^~~~~~[m[K
+[6.510s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:123:16:[m[K [01;31m[Kerror: [m[K‘[01m[Karmed_[m[K’ was not declared in this scope
+[6.511s]   123 |           if (![01;31m[Karmed_[m[K)
+[6.511s]       |                [01;31m[K^~~~~~[m[K
+[6.541s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:130:13:[m[K [01;31m[Kerror: [m[K‘[01m[Koffboard_setpoint_counter_[m[K’ was not declared in this scope
+[6.541s]   130 |         if ([01;31m[Koffboard_setpoint_counter_[m[K < 11)
+[6.542s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.542s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In constructor ‘[01m[KLandingTest::LandingTest()[m[K’:
+[6.543s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:136:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kprivate[m[K’
+[6.543s]   136 |     [01;31m[Kprivate[m[K:
+[6.543s]       |     [01;31m[K^~~~~~~[m[K
+[6.555s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:138:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktimestamp_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.555s]   138 |       std::atomic<uint64_t> [01;35m[Ktimestamp_[m[K;
+[6.555s]       |                             [01;35m[K^~~~~~~~~~[m[K
+[6.555s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:156:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khas_odom_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.555s]   156 |     bool [01;35m[Khas_odom_[m[K = false;
+[6.555s]       |          [01;35m[K^~~~~~~~~[m[K
+[6.556s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:157:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Karmed_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.556s]   157 |     bool [01;35m[Karmed_[m[K = false;
+[6.556s]       |          [01;35m[K^~~~~~[m[K
+[6.556s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:158:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klanded_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.556s]   158 |     bool [01;35m[Klanded_[m[K = false;
+[6.556s]       |          [01;35m[K^~~~~~~[m[K
+[6.556s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:159:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khave_alt_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.557s]   159 |     bool [01;35m[Khave_alt_[m[K = false;
+[6.557s]       |          [01;35m[K^~~~~~~~~[m[K
+[6.557s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:161:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khold_counter_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.557s]   161 |     int [01;35m[Khold_counter_[m[K = 0;
+[6.557s]       |         [01;35m[K^~~~~~~~~~~~~[m[K
+[6.557s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:162:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KHOLD_THRESHOLD[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.557s]   162 |     int [01;35m[KHOLD_THRESHOLD[m[K = 20;
+[6.558s]       |         [01;35m[K^~~~~~~~~~~~~~[m[K
+[6.558s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:174:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Koffboard_setpoint_counter_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.558s]   174 |     int [01;35m[Koffboard_setpoint_counter_[m[K = 0;
+[6.558s]       |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.558s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:176:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdesired_x_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.558s]   176 |     float [01;35m[Kdesired_x_[m[K = 0.0f;
+[6.558s]       |           [01;35m[K^~~~~~~~~~[m[K
+[6.558s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:177:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdesired_y_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.559s]   177 |     float [01;35m[Kdesired_y_[m[K = 0.0f;
+[6.559s]       |           [01;35m[K^~~~~~~~~~[m[K
+[6.559s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:178:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kacc_alt_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.559s]   178 |     float [01;35m[Kacc_alt_[m[K = 0.0f;
+[6.559s]       |           [01;35m[K^~~~~~~~[m[K
+[6.559s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:180:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klow_enough_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.559s]   180 |     float [01;35m[Klow_enough_[m[K = -0.5f;
+[6.559s]       |           [01;35m[K^~~~~~~~~~~[m[K
+[6.559s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:181:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdescent_vel_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.560s]   181 |     float [01;35m[Kdescent_vel_[m[K = 0.0f;
+[6.560s]       |           [01;35m[K^~~~~~~~~~~~[m[K
+[6.560s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:182:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiter_ratio_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.560s]   182 |     float [01;35m[Kiter_ratio_[m[K = 0.2f;
+[6.560s]       |           [01;35m[K^~~~~~~~~~~[m[K
+[6.560s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:184:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmission_mode_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.560s]   184 |     Mission [01;35m[Kmission_mode_[m[K = LANDING;
+[6.561s]       |             [01;35m[K^~~~~~~~~~~~~[m[K
+[7.050s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::arm()[m[K’:
+[7.051s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:188:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLandingTest::publish_vehicle_command(const uint16_t&, double)[m[K’
+[7.051s]   188 |   [01;31m[Kpublish_vehicle_command(VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 1.0)[m[K;
+[7.051s]       |   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.051s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)[m[K’
+[7.051s]   319 | void [01;36m[KLandingTest[m[K::publish_vehicle_command(uint16_t command, float param1, float param2) {
+[7.051s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[7.052s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[7.065s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:191:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmed_[m[K’ was not declared in this scope
+[7.066s]   191 |   [01;31m[Karmed_[m[K = true;
+[7.066s]       |   [01;31m[K^~~~~~[m[K
+[7.066s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::disarm()[m[K’:
+[7.066s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:195:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLandingTest::publish_vehicle_command(const uint16_t&, double)[m[K’
+[7.066s]   195 |   [01;31m[Kpublish_vehicle_command(VehicleCommand::VEHICLE_CMD_COMPONENT_ARM_DISARM, 0.0)[m[K;
+[7.066s]       |   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.066s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)[m[K’
+[7.066s]   319 | void [01;36m[KLandingTest[m[K::publish_vehicle_command(uint16_t command, float param1, float param2) {
+[7.066s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[7.066s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+[7.079s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:198:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmed_[m[K’ was not declared in this scope
+[7.079s]   198 |   [01;31m[Karmed_[m[K = false;
+[7.079s]       |   [01;31m[K^~~~~~[m[K
+[7.094s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::publish_offboard_control_mode()[m[K’:
+[7.094s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:203:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmission_mode_[m[K’ was not declared in this scope
+[7.094s]   203 |   msg.position = [01;31m[Kmission_mode_[m[K == LANDING? false:true;
+[7.095s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[7.111s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:203:35:[m[K [01;31m[Kerror: [m[K‘[01m[KLANDING[m[K’ was not declared in this scope
+[7.111s]   203 |   msg.position = mission_mode_ == [01;31m[KLANDING[m[K? false:true;
+[7.111s]       |                                   [01;31m[K^~~~~~~[m[K
+[7.146s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:209:3:[m[K [01;31m[Kerror: [m[K‘[01m[Koffboard_control_mode_publisher_[m[K’ was not declared in this scope
+[7.146s]   209 |   [01;31m[Koffboard_control_mode_publisher_[m[K->publish(msg);
+[7.146s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.165s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::publish_trajectory_setpoint()[m[K’:
+[7.165s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:213:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurr_odom_[m[K’ was not declared in this scope
+[7.165s]   213 |   if([01;31m[Kcurr_odom_[m[K.timestamp == 0) {
+[7.166s]       |      [01;31m[K^~~~~~~~~~[m[K
+[7.202s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:220:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurr_odom_[m[K’ was not declared in this scope
+[7.202s]   220 |   Eigen::Vector3f current([01;31m[Kcurr_odom_[m[K.position[0], curr_odom_.position[1], curr_odom_.position[2]);
+[7.203s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[7.237s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:228:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khold_counter_[m[K’ was not declared in this scope
+[7.237s]   228 |     [01;31m[Khold_counter_[m[K ++;
+[7.238s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[7.255s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:230:24:[m[K [01;31m[Kerror: [m[K‘[01m[KHOLD_THRESHOLD[m[K’ was not declared in this scope
+[7.255s]   230 |     if(hold_counter_ > [01;31m[KHOLD_THRESHOLD[m[K) {
+[7.255s]       |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.271s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:232:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmission_mode_[m[K’ was not declared in this scope
+[7.271s]   232 |       [01;31m[Kmission_mode_[m[K = LANDING;
+[7.272s]       |       [01;31m[K^~~~~~~~~~~~~[m[K
+[7.284s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:232:23:[m[K [01;31m[Kerror: [m[K‘[01m[KLANDING[m[K’ was not declared in this scope
+[7.284s]   232 |       mission_mode_ = [01;31m[KLANDING[m[K;
+[7.284s]       |                       [01;31m[K^~~~~~~[m[K
+[7.312s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:238:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_setpoint_publisher_[m[K’ was not declared in this scope
+[7.312s]   238 |   [01;31m[Ktrajectory_setpoint_publisher_[m[K->publish(msg);
+[7.313s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.326s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::land()[m[K’:
+[7.327s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:242:8:[m[K [01;31m[Kerror: [m[K‘[01m[Khas_odom_[m[K’ was not declared in this scope
+[7.327s]   242 |   if (![01;31m[Khas_odom_[m[K) {
+[7.327s]       |        [01;31m[K^~~~~~~~~[m[K
+[7.344s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:246:8:[m[K [01;31m[Kerror: [m[K‘[01m[Khave_alt_[m[K’ was not declared in this scope
+[7.345s]   246 |   if (![01;31m[Khave_alt_[m[K) {
+[7.345s]       |        [01;31m[K^~~~~~~~~[m[K
+[7.363s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:252:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurr_odom_[m[K’ was not declared in this scope
+[7.363s]   252 |   Eigen::Quaternionf q([01;31m[Kcurr_odom_[m[K.q[0], curr_odom_.q[1], curr_odom_.q[2], curr_odom_.q[3]);
+[7.364s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[7.382s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kiter_ratio_[m[K’ was not declared in this scope
+[7.382s]   257 |   [01;31m[Kiter_ratio_[m[K = descent_vel_*acc_alt_*0.15;
+[7.383s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[7.398s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdescent_vel_[m[K’ was not declared in this scope
+[7.399s]   257 |   iter_ratio_ = [01;31m[Kdescent_vel_[m[K*acc_alt_*0.15;
+[7.399s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[7.412s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:257:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kacc_alt_[m[K’ was not declared in this scope
+[7.412s]   257 |   iter_ratio_ = descent_vel_*[01;31m[Kacc_alt_[m[K*0.15;
+[7.412s]       |                              [01;31m[K^~~~~~~~[m[K
+[7.431s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_x_[m[K’ was not declared in this scope
+[7.431s]   261 |   if([01;31m[Kdesired_x_[m[K != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0};
+[7.431s]       |      [01;31m[K^~~~~~~~~~[m[K
+[7.445s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_y_[m[K’ was not declared in this scope
+[7.445s]   261 |   if(desired_x_ != 0 || [01;31m[Kdesired_y_[m[K != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0};
+[7.445s]       |                         [01;31m[K^~~~~~~~~~[m[K
+[7.445s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+[7.446s]   261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0[01;31m[K}[m[K;
+[7.446s]       |                                                                                         [01;31m[K^[m[K
+[7.446s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[7.446s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.447s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.447s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.447s]   223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+[7.447s]       |                                 [01;36m[K^~~~~~~~[m[K
+[7.447s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.447s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KOtherDerived[m[K’
+[7.447s]   261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0[01;36m[K}[m[K;
+[7.447s]       |                                                                                         [01;36m[K^[m[K
+[7.448s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[7.448s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.448s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.448s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.448s]   236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+[7.448s]       |                                 [01;36m[K^~~~~~~~[m[K
+[7.448s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.448s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KOtherDerived[m[K’
+[7.448s]   261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0[01;36m[K}[m[K;
+[7.448s]       |                                                                                         [01;36m[K^[m[K
+[7.449s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[7.449s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.449s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.449s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.449s]   243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+[7.449s]       |                                 [01;36m[K^~~~~~~~[m[K
+[7.449s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.449s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KOtherDerived[m[K’
+[7.449s]   261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0[01;36m[K}[m[K;
+[7.450s]       |                                                                                         [01;36m[K^[m[K
+[7.450s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[7.450s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.450s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.450s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.450s]   438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+[7.450s]       |             [01;36m[K^~~~~~~~[m[K
+[7.450s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[7.451s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:261:89:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KOtherDerived[m[K’
+[7.451s]   261 |   if(desired_x_ != 0 || desired_y_ != 0) target_pos_FRD = {desired_y_*k, desired_x_*k, 0[01;36m[K}[m[K;
+[7.451s]       |                                                                                         [01;36m[K^[m[K
+[7.451s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+[7.451s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.451s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.451s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.452s]   206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+[7.452s]       |                                 [01;36m[K^~~~~~~~[m[K
+[7.452s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst Eigen::Matrix<float, 3, 1>&[m[K’
+[7.452s]   206 |     EIGEN_STRONG_INLINE Matrix& operator=([01;36m[Kconst Matrix& other[m[K)
+[7.452s]       |                                           [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[7.452s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+[7.452s]   279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+[7.452s]       |             [01;36m[K^~~~~~~~[m[K
+[7.453s] [01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KEigen::Matrix<float, 3, 1>&&[m[K’
+[7.453s]   279 |     Matrix& operator=([01;36m[KMatrix&& other[m[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+[7.453s]       |                       [01;36m[K~~~~~~~~~^~~~~[m[K
+[7.469s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:266:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klow_enough_[m[K’ was not declared in this scope
+[7.470s]   266 |   if (acc_alt_ > [01;31m[Klow_enough_[m[K)
+[7.470s]       |                  [01;31m[K^~~~~~~~~~~[m[K
+[7.489s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:268:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmission_mode_[m[K’ was not declared in this scope
+[7.489s]   268 |     [01;31m[Kmission_mode_[m[K = FINISHED;
+[7.489s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[7.504s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:268:21:[m[K [01;31m[Kerror: [m[K‘[01m[KFINISHED[m[K’ was not declared in this scope
+[7.505s]   268 |     mission_mode_ = [01;31m[KFINISHED[m[K;
+[7.505s]       |                     [01;31m[K^~~~~~~~[m[K
+[7.505s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:270:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLandingTest::publish_vehicle_command(const uint16_t&)[m[K’
+[7.505s]   270 |     [01;31m[Kpublish_vehicle_command([m[K
+[7.505s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[7.505s]   271 | [01;31m[K        px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND)[m[K;
+[7.505s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.505s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)[m[K’
+[7.506s]   319 | void [01;36m[KLandingTest[m[K::publish_vehicle_command(uint16_t command, float param1, float param2) {
+[7.506s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[7.506s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:319:6:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[7.524s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:285:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_x_[m[K’ was not declared in this scope
+[7.524s]   285 |     [01;31m[Kdesired_x_[m[K * desired_x_ +
+[7.524s]       |     [01;31m[K^~~~~~~~~~[m[K
+[7.540s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:286:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdesired_y_[m[K’ was not declared in this scope
+[7.540s]   286 |     [01;31m[Kdesired_y_[m[K * desired_y_
+[7.540s]       |     [01;31m[K^~~~~~~~~~[m[K
+[7.541s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:308:5:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >::_velocity_type[m[K’ {aka ‘[01m[Kstd::array<float, 3>[m[K’} and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+[7.542s]   308 |     [01;31m[K}[m[K;
+[7.542s]       |     [01;31m[K^[m[K
+[7.542s] In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+[7.542s]                  from [01m[K/usr/include/c++/11/functional:54[m[K,
+[7.542s]                  from [01m[K/usr/include/eigen3/Eigen/Core:85[m[K,
+[7.542s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[7.542s]                  from [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:6[m[K:
+[7.542s] [01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 3>& std::array<float, 3>::operator=(const std::array<float, 3>&)[m[K’
+[7.542s]    95 |     struct [01;36m[Karray[m[K
+[7.542s]       |            [01;36m[K^~~~~[m[K
+[7.543s] [01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::array<float, 3>&[m[K’
+[7.543s] [01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<float, 3>& std::array<float, 3>::operator=(std::array<float, 3>&&)[m[K’
+[7.543s] [01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::array<float, 3>&&[m[K’
+[7.582s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:316:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_setpoint_publisher_[m[K’ was not declared in this scope
+[7.582s]   316 |   [01;31m[Ktrajectory_setpoint_publisher_[m[K->publish(msg);
+[7.583s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.613s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K In member function ‘[01m[Kvoid LandingTest::publish_vehicle_command(uint16_t, float, float)[m[K’:
+[7.613s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:328:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kvehicle_command_publisher_[m[K’ was not declared in this scope
+[7.613s]   328 |   [01;31m[Kvehicle_command_publisher_[m[K->publish(msg);
+[7.614s]       |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.619s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:[m[K At global scope:
+[7.619s] [01m[K/home/ldy/space_y/ws_KRAC/src/flight_control/src/landing_test_vel.cpp:339:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[7.619s]   339 | }
+[7.619s]       |  [01;31m[K^[m[K
+[15.075s] gmake[2]: *** [CMakeFiles/landing_test_vel.dir/build.make:76: CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o] Error 1
+[15.075s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/landing_test_vel.dir/all] Error 2
+[15.075s] gmake: *** [Makefile:146: all] Error 2
+[15.084s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28

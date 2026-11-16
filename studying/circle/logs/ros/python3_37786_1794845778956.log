@@ -1,0 +1,296 @@
+[INFO] [1794845779.031873073] [px4_state_monitor]: PX4 상태 모니터 시작 | 토픽: /fmu/out/vehicle_local_position, /fmu/out/vehicle_status_v1, /fmu/out/vehicle_land_detected
+[INFO] [1794845780.009703978] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.042, y=-0.020, z=0.007 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845780005699, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845779925699, 수신 후 경과=0.08s
+  착륙: timestamp_us=1794845779813699, 수신 후 경과=0.19s
+[INFO] [1794845781.009717506] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.029, y=-0.037, z=-0.011 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845780997698, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845780933698, 수신 후 경과=0.08s
+  착륙: timestamp_us=1794845780813698, 수신 후 경과=0.19s
+[INFO] [1794845782.009685790] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.014, y=-0.043, z=-0.026 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845782005700, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845781941700, 수신 후 경과=0.07s
+  착륙: timestamp_us=1794845781813700, 수신 후 경과=0.20s
+[INFO] [1794845782.037138243] [px4_state_monitor]: STEP 3 미션 시작 | CSV: /home/ldy/space_y/studying/logs/step3_20261117_011622_034662.csv
+[INFO] [1794845783.009637778] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.033, y=-0.029, z=-0.013 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845782997700, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845782949700, 수신 후 경과=0.06s
+  착륙: timestamp_us=1794845782813700, 수신 후 경과=0.19s
+[INFO] [1794845784.009861156] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.047, y=-0.029, z=-0.018 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845784005701, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845783957701, 수신 후 경과=0.05s
+  착륙: timestamp_us=1794845783813701, 수신 후 경과=0.19s
+[INFO] [1794845784.087068615] [px4_state_monitor]: 미션: WAIT → PREPARE_OFFBOARD | 
+[INFO] [1794845785.009760233] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.033, y=-0.015, z=-0.019 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845785005701, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845784653701, 수신 후 경과=0.36s
+  착륙: timestamp_us=1794845784949701, 수신 후 경과=0.06s
+[INFO] [1794845786.010028804] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.016, y=-0.023, z=-0.008 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=AUTO_LOITER (4) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845786005701, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845785661701, 수신 후 경과=0.35s
+  착륙: timestamp_us=1794845785949701, 수신 후 경과=0.06s
+[INFO] [1794845786.087872743] [px4_state_monitor]: 미션: PREPARE_OFFBOARD → OFFBOARD | 
+[INFO] [1794845786.137480747] [px4_state_monitor]: Command 전송: OFFBOARD
+[INFO] [1794845786.142213606] [px4_state_monitor]: Command ACK: command=176, result=0 (0=accepted, 1=temporary reject, 2=denied, 4=failed)
+[INFO] [1794845786.187402666] [px4_state_monitor]: 미션: OFFBOARD → ARM | 
+[INFO] [1794845786.237982761] [px4_state_monitor]: Command 전송: ARM
+[INFO] [1794845786.250424633] [px4_state_monitor]: Command ACK: command=400, result=0 (0=accepted, 1=temporary reject, 2=denied, 4=failed)
+[INFO] [1794845786.287371674] [px4_state_monitor]: 미션: ARM → TAKEOFF | 
+[INFO] [1794845787.010129024] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.011, y=-0.016, z=-0.005 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845786997701, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845786753701, 수신 후 경과=0.25s
+  착륙: timestamp_us=1794845786189701, 수신 후 경과=0.82s
+[INFO] [1794845788.009786059] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.022, y=-0.025, z=0.002 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845787997702, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845787761702, 수신 후 경과=0.25s
+  착륙: timestamp_us=1794845787293702, 수신 후 경과=0.71s
+[INFO] [1794845789.010281366] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.041, y=-0.022, z=-0.005 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845788997702, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845788769702, 수신 후 경과=0.24s
+  착륙: timestamp_us=1794845788077702, 수신 후 경과=0.93s
+[INFO] [1794845790.010208023] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.048, y=-0.020, z=-0.006 | heading=1.677 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845789997703, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845789777703, 수신 후 경과=0.23s
+  착륙: timestamp_us=1794845789077702, 수신 후 경과=0.93s
+[INFO] [1794845791.009724887] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.056, y=-0.024, z=-0.113 | heading=1.676 rad (96.1°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845791005703, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845790785703, 수신 후 경과=0.22s
+  착륙: timestamp_us=1794845790301703, 수신 후 경과=0.71s
+[INFO] [1794845792.009867143] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.023, y=-0.043, z=-0.726 | heading=1.679 rad (96.2°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845791997704, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845791793704, 수신 후 경과=0.22s
+  착륙: timestamp_us=1794845791301704, 수신 후 경과=0.71s
+[INFO] [1794845793.010093710] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.009, y=-0.049, z=-1.485 | heading=1.678 rad (96.2°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/2
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845793005704, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845792801704, 수신 후 경과=0.21s
+  착륙: timestamp_us=1794845792301704, 수신 후 경과=0.71s
+[INFO] [1794845794.010193205] [px4_state_monitor]: 상태: heading 최종 정렬 미완료
+  NED 위치 [m]: x=-0.051, y=-0.034, z=-2.207 | heading=1.697 rad (97.2°)
+  xy_valid=True, z_valid=True, heading_good_for_control=False | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845794005705, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845793809705, 수신 후 경과=0.20s
+  착륙: timestamp_us=1794845793301705, 수신 후 경과=0.71s
+[INFO] [1794845795.009813709] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.069, y=-0.026, z=-2.834 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845795005704, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845794817704, 수신 후 경과=0.19s
+  착륙: timestamp_us=1794845794301704, 수신 후 경과=0.71s
+[INFO] [1794845796.010079742] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.044, y=-0.036, z=-3.327 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845796005705, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845795825705, 수신 후 경과=0.18s
+  착륙: timestamp_us=1794845795301705, 수신 후 경과=0.71s
+[INFO] [1794845797.009789396] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.040, y=-0.067, z=-3.667 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845796997706, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845796833706, 수신 후 경과=0.18s
+  착륙: timestamp_us=1794845796301706, 수신 후 경과=0.71s
+[INFO] [1794845798.009768440] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.040, y=-0.031, z=-3.857 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845797997706, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845797841706, 수신 후 경과=0.17s
+  착륙: timestamp_us=1794845797301706, 수신 후 경과=0.71s
+[INFO] [1794845799.010010210] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.047, y=-0.017, z=-3.944 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845798997706, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845798849706, 수신 후 경과=0.16s
+  착륙: timestamp_us=1794845798301706, 수신 후 경과=0.71s
+[INFO] [1794845800.009789694] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.049, y=-0.016, z=-3.981 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845800005706, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845799857706, 수신 후 경과=0.15s
+  착륙: timestamp_us=1794845799301706, 수신 후 경과=0.71s
+[INFO] [1794845800.337375824] [px4_state_monitor]: 미션: TAKEOFF → HOVER | 
+[INFO] [1794845801.009719730] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.042, y=-0.012, z=-4.004 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845801005707, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845800865707, 수신 후 경과=0.14s
+  착륙: timestamp_us=1794845800301707, 수신 후 경과=0.71s
+[INFO] [1794845802.009652913] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.032, y=-0.030, z=-4.011 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845802005706, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845801873706, 수신 후 경과=0.14s
+  착륙: timestamp_us=1794845801301706, 수신 후 경과=0.71s
+[INFO] [1794845803.009645293] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.047, y=-0.042, z=-4.018 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845803005707, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845802881707, 수신 후 경과=0.13s
+  착륙: timestamp_us=1794845802301707, 수신 후 경과=0.71s
+[INFO] [1794845804.009826084] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.071, y=-0.049, z=-4.027 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845804005707, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845803889707, 수신 후 경과=0.12s
+  착륙: timestamp_us=1794845803301707, 수신 후 경과=0.71s
+[INFO] [1794845805.010076821] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.061, y=-0.035, z=-4.026 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=OFFBOARD (14) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845804997707, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845804897707, 수신 후 경과=0.11s
+  착륙: timestamp_us=1794845804301707, 수신 후 경과=0.71s
+[INFO] [1794845805.387389359] [px4_state_monitor]: Command 전송: LAND
+[INFO] [1794845805.387644723] [px4_state_monitor]: 미션: HOVER → LAND | 
+[INFO] [1794845805.402542593] [px4_state_monitor]: Command ACK: command=21, result=0 (0=accepted, 1=temporary reject, 2=denied, 4=failed)
+[INFO] [1794845806.010112221] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.054, y=-0.022, z=-3.856 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845806005708, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845805929708, 수신 후 경과=0.08s
+  착륙: timestamp_us=1794845805789708, 수신 후 경과=0.22s
+[INFO] [1794845807.010251914] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.044, y=-0.009, z=-3.181 | heading=1.701 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845807005708, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845806937708, 수신 후 경과=0.07s
+  착륙: timestamp_us=1794845806789708, 수신 후 경과=0.22s
+[INFO] [1794845808.009768087] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.045, y=-0.015, z=-2.519 | heading=1.701 rad (97.4°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845807997709, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845807945709, 수신 후 경과=0.06s
+  착륙: timestamp_us=1794845807789709, 수신 후 경과=0.22s
+[INFO] [1794845809.010079694] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.062, y=-0.033, z=-1.820 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845809005709, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845808953709, 수신 후 경과=0.06s
+  착륙: timestamp_us=1794845808789709, 수신 후 경과=0.22s
+[INFO] [1794845810.010019310] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.054, y=-0.035, z=-1.120 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845810005710, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845809961710, 수신 후 경과=0.05s
+  착륙: timestamp_us=1794845809789710, 수신 후 경과=0.22s
+[INFO] [1794845811.009937883] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.034, y=-0.018, z=-0.416 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845810997709, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845810969709, 수신 후 경과=0.04s
+  착륙: timestamp_us=1794845810789709, 수신 후 경과=0.22s
+[INFO] [1794845812.009762485] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.046, y=-0.015, z=0.021 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=False, ground_contact=False
+  위치: timestamp_us=1794845812005710, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845811977710, 수신 후 경과=0.03s
+  착륙: timestamp_us=1794845811789710, 수신 후 경과=0.22s
+[INFO] [1794845813.009709053] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.038, y=-0.024, z=-0.023 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845813005710, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845812985710, 수신 후 경과=0.02s
+  착륙: timestamp_us=1794845812805710, 수신 후 경과=0.20s
+[INFO] [1794845814.009776099] [px4_state_monitor]: 상태: 수신·추정 유효
+  NED 위치 [m]: x=-0.022, y=-0.045, z=-0.017 | heading=1.702 rad (97.5°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/3
+  Arm=ARMED (2) | mode=AUTO_LAND (18) | failsafe=False, preflight=True
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845814005711, 수신 후 경과=0.00s
+  상태: timestamp_us=1794845813993711, 수신 후 경과=0.02s
+  착륙: timestamp_us=1794845813805711, 수신 후 경과=0.20s
+[INFO] [1794845814.837189588] [px4_state_monitor]: 미션: LAND → DONE | 
+[INFO] [1794845814.837659069] [px4_state_monitor]: 결과: DONE, 최대 상대 고도=4.01m, 최대 수평 이탈=0.06m | 정상 완료

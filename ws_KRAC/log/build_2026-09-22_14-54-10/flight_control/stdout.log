@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target landing_test_vel[0m
+[ 33%] Built target landing_test_flight
+[ 66%] Built target landing_test
+[ 83%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m

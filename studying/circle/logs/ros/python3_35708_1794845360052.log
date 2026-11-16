@@ -1,0 +1,25 @@
+[INFO] [1794845360.123618576] [px4_state_monitor]: PX4 상태 모니터 시작 | 토픽: /fmu/out/vehicle_local_position, /fmu/out/vehicle_status_v1, /fmu/out/vehicle_land_detected
+[INFO] [1794845361.104736127] [px4_state_monitor]: 상태: PX4 preflight 미통과
+  NED 위치 [m]: x=0.025, y=-0.053, z=-0.042 | heading=1.656 rad (94.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=OFFBOARD (14) | failsafe=False, preflight=False
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845361097564, 수신 후 경과=0.01s
+  상태: timestamp_us=1794845360653570, 수신 후 경과=0.46s
+  착륙: timestamp_us=1794845361089564, 수신 후 경과=0.02s
+[INFO] [1794845362.104446652] [px4_state_monitor]: 상태: PX4 preflight 미통과
+  NED 위치 [m]: x=0.031, y=-0.048, z=-0.044 | heading=1.656 rad (94.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=OFFBOARD (14) | failsafe=False, preflight=False
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845362097555, 수신 후 경과=0.01s
+  상태: timestamp_us=1794845361661564, 수신 후 경과=0.45s
+  착륙: timestamp_us=1794845362089555, 수신 후 경과=0.02s
+[INFO] [1794845363.104396336] [px4_state_monitor]: 상태: PX4 preflight 미통과
+  NED 위치 [m]: x=0.014, y=-0.027, z=-0.044 | heading=1.656 rad (94.9°)
+  xy_valid=True, z_valid=True, heading_good_for_control=True | EKF reset counters xy/z/heading=4/3/2
+  Arm=DISARMED (1) | mode=OFFBOARD (14) | failsafe=False, preflight=False
+  landed=True, ground_contact=True
+  위치: timestamp_us=1794845363097548, 수신 후 경과=0.01s
+  상태: timestamp_us=1794845362669555, 수신 후 경과=0.44s
+  착륙: timestamp_us=1794845363089548, 수신 후 경과=0.02s

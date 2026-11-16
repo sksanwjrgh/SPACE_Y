@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-eb1c05369b83ad60f7ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "flight_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "flight_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flight_control_uninstall-f9d1043993aee70e3c06.json",
+					"name" : "flight_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "landing_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-landing_test-8b7f9ce915618f1ede9a.json",
+					"name" : "landing_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "landing_test_flight::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-landing_test_flight-8f07150e006b6c5ff762.json",
+					"name" : "landing_test_flight",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "landing_test_vel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-landing_test_vel-9b1b2828e066b4e5eb86.json",
+					"name" : "landing_test_vel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-30f89518fbf51fe4c135.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ldy/space_y/ws_KRAC/build/flight_control",
+		"source" : "/home/ldy/space_y/ws_KRAC/src/flight_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

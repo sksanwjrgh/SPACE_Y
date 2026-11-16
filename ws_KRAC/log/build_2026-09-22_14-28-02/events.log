@@ -1,0 +1,550 @@
+[0.000000] (-) TimerEvent: {}
+[0.000552] (flight_control) JobQueued: {'identifier': 'flight_control', 'dependencies': OrderedDict()}
+[0.001275] (imagery_processing) JobQueued: {'identifier': 'imagery_processing', 'dependencies': OrderedDict()}
+[0.002078] (launch_package) JobQueued: {'identifier': 'launch_package', 'dependencies': OrderedDict([('flight_control', '/home/ldy/space_y/ws_KRAC/install/flight_control'), ('imagery_processing', '/home/ldy/space_y/ws_KRAC/install/imagery_processing')])}
+[0.002161] (flight_control) JobStarted: {'identifier': 'flight_control'}
+[0.024019] (imagery_processing) JobStarted: {'identifier': 'imagery_processing'}
+[0.044787] (flight_control) JobProgress: {'identifier': 'flight_control', 'progress': 'cmake'}
+[0.045786] (flight_control) JobProgress: {'identifier': 'flight_control', 'progress': 'build'}
+[0.047678] (flight_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ldy/space_y/ws_KRAC/build/flight_control', '--', '-j28', '-l28'], 'cwd': '/home/ldy/space_y/ws_KRAC/build/flight_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ldy'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ldy/ros2_px4_ws/install/px4_ros_com/lib:/home/ldy/ros2_px4_ws/install/px4_msgs/lib:/home/ldy/ros2_px4_ws/install/microxrcedds_agent/lib:/home/ldy/px4_ros_ws/install/px4_ros_com/lib:/home/ldy/px4_ros_ws/install/px4_msgs/lib:/home/ldy/px4_ros_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ldy'), ('OLDPWD', '/home/ldy/space_y/ws_KRAC'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1803'), ('SYSTEMD_EXEC_PID', '1979'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11729'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ldy/px4_ros_ws/install:/home/ldy/space_y/ws_KRAC/install:/home/ldy/ros2_px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ldy'), ('JOURNAL_STREAM', '8:30885'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ldy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ldy/ros2_px4_ws/install/microxrcedds_agent/bin:/home/ldy/px4_ros_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/ldy/.local/bin:/home/ldy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/victus:@/tmp/.ICE-unix/1952,unix/victus:/tmp/.ICE-unix/1952'), ('INVOCATION_ID', '0ff3626040fb4ea694a371bac9c16ae9'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JZE7V3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:fb400dc3-2d18-4e58-a4d6-82f301300ee0'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ldy/space_y/ws_KRAC/build/flight_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ldy/space_y/ws_KRAC/build/launch_package:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/imagery_processing:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/ros2_px4_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/ros2_px4_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/ros2_px4_ws/install/microxrcedds_agent:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/microxrcedds_agent:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble')]), 'shell': False}
+[0.099209] (-) TimerEvent: {}
+[0.171614] (flight_control) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target landing_test_vel\x1b[0m\n'}
+[0.199324] (-) TimerEvent: {}
+[0.205173] (flight_control) StdoutLine: {'line': b'[ 33%] Built target landing_test\n'}
+[0.205945] (flight_control) StdoutLine: {'line': b'[ 66%] Built target landing_test_flight\n'}
+[0.222435] (flight_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o\x1b[0m\n'}
+[0.299482] (-) TimerEvent: {}
+[0.400223] (-) TimerEvent: {}
+[0.500837] (-) TimerEvent: {}
+[0.601774] (-) TimerEvent: {}
+[0.702446] (-) TimerEvent: {}
+[0.803052] (-) TimerEvent: {}
+[0.903782] (-) TimerEvent: {}
+[1.004584] (-) TimerEvent: {}
+[1.105174] (-) TimerEvent: {}
+[1.205747] (-) TimerEvent: {}
+[1.306555] (-) TimerEvent: {}
+[1.407181] (-) TimerEvent: {}
+[1.508005] (-) TimerEvent: {}
+[1.608674] (-) TimerEvent: {}
+[1.709432] (-) TimerEvent: {}
+[1.810092] (-) TimerEvent: {}
+[1.910957] (-) TimerEvent: {}
+[2.011739] (-) TimerEvent: {}
+[2.112335] (-) TimerEvent: {}
+[2.212920] (-) TimerEvent: {}
+[2.313779] (-) TimerEvent: {}
+[2.414654] (-) TimerEvent: {}
+[2.515692] (-) TimerEvent: {}
+[2.616522] (-) TimerEvent: {}
+[2.673422] (imagery_processing) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ldy/space_y/ws_KRAC/build/imagery_processing/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ldy/space_y/ws_KRAC/build/imagery_processing', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ldy'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ldy/ros2_px4_ws/install/px4_ros_com/lib:/home/ldy/ros2_px4_ws/install/px4_msgs/lib:/home/ldy/ros2_px4_ws/install/microxrcedds_agent/lib:/home/ldy/px4_ros_ws/install/px4_ros_com/lib:/home/ldy/px4_ros_ws/install/px4_msgs/lib:/home/ldy/px4_ros_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ldy'), ('OLDPWD', '/home/ldy/space_y/ws_KRAC'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1803'), ('SYSTEMD_EXEC_PID', '1979'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11729'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ldy/px4_ros_ws/install:/home/ldy/space_y/ws_KRAC/install:/home/ldy/ros2_px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ldy'), ('JOURNAL_STREAM', '8:30885'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ldy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ldy/ros2_px4_ws/install/microxrcedds_agent/bin:/home/ldy/px4_ros_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/ldy/.local/bin:/home/ldy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/victus:@/tmp/.ICE-unix/1952,unix/victus:/tmp/.ICE-unix/1952'), ('INVOCATION_ID', '0ff3626040fb4ea694a371bac9c16ae9'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JZE7V3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:fb400dc3-2d18-4e58-a4d6-82f301300ee0'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ldy/space_y/ws_KRAC/build/imagery_processing'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/launch_package:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/imagery_processing:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/ros2_px4_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/ros2_px4_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/ros2_px4_ws/install/microxrcedds_agent:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/microxrcedds_agent')]), 'shell': False}
+[2.716703] (-) TimerEvent: {}
+[2.817540] (-) TimerEvent: {}
+[2.918341] (-) TimerEvent: {}
+[3.019125] (-) TimerEvent: {}
+[3.120929] (-) TimerEvent: {}
+[3.222007] (-) TimerEvent: {}
+[3.322923] (-) TimerEvent: {}
+[3.423866] (-) TimerEvent: {}
+[3.447511] (imagery_processing) StdoutLine: {'line': b'running develop\n'}
+[3.524035] (-) TimerEvent: {}
+[3.624728] (-) TimerEvent: {}
+[3.725591] (-) TimerEvent: {}
+[3.826351] (-) TimerEvent: {}
+[3.920086] (imagery_processing) StdoutLine: {'line': b'running egg_info\n'}
+[3.920984] (imagery_processing) StdoutLine: {'line': b'writing imagery_processing.egg-info/PKG-INFO\n'}
+[3.921383] (imagery_processing) StdoutLine: {'line': b'writing dependency_links to imagery_processing.egg-info/dependency_links.txt\n'}
+[3.921825] (imagery_processing) StdoutLine: {'line': b'writing entry points to imagery_processing.egg-info/entry_points.txt\n'}
+[3.922061] (imagery_processing) StdoutLine: {'line': b'writing requirements to imagery_processing.egg-info/requires.txt\n'}
+[3.922329] (imagery_processing) StdoutLine: {'line': b'writing top-level names to imagery_processing.egg-info/top_level.txt\n'}
+[3.926529] (-) TimerEvent: {}
+[3.927168] (imagery_processing) StdoutLine: {'line': b"reading manifest file 'imagery_processing.egg-info/SOURCES.txt'\n"}
+[3.928652] (imagery_processing) StdoutLine: {'line': b"writing manifest file 'imagery_processing.egg-info/SOURCES.txt'\n"}
+[3.932846] (imagery_processing) StdoutLine: {'line': b'running build_ext\n'}
+[3.933244] (imagery_processing) StdoutLine: {'line': b'Creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery-processing.egg-link (link to .)\n'}
+[3.934986] (imagery_processing) StdoutLine: {'line': b'Installing marker_recognition script to /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/imagery_processing\n'}
+[3.935481] (imagery_processing) StdoutLine: {'line': b'\n'}
+[3.935723] (imagery_processing) StdoutLine: {'line': b'Installed /home/ldy/space_y/ws_KRAC/build/imagery_processing\n'}
+[3.935881] (imagery_processing) StdoutLine: {'line': b'running symlink_data\n'}
+[4.008270] (imagery_processing) CommandEnded: {'returncode': 0}
+[4.027262] (-) TimerEvent: {}
+[4.051600] (imagery_processing) JobEnded: {'identifier': 'imagery_processing', 'rc': 0}
+[4.127391] (-) TimerEvent: {}
+[4.227892] (-) TimerEvent: {}
+[4.328565] (-) TimerEvent: {}
+[4.429444] (-) TimerEvent: {}
+[4.530070] (-) TimerEvent: {}
+[4.630945] (-) TimerEvent: {}
+[4.731833] (-) TimerEvent: {}
+[4.832978] (-) TimerEvent: {}
+[4.934114] (-) TimerEvent: {}
+[5.034972] (-) TimerEvent: {}
+[5.136049] (-) TimerEvent: {}
+[5.236907] (-) TimerEvent: {}
+[5.337631] (-) TimerEvent: {}
+[5.438471] (-) TimerEvent: {}
+[5.539115] (-) TimerEvent: {}
+[5.639872] (-) TimerEvent: {}
+[5.740545] (-) TimerEvent: {}
+[5.841254] (-) TimerEvent: {}
+[5.942231] (-) TimerEvent: {}
+[6.043246] (-) TimerEvent: {}
+[6.143976] (-) TimerEvent: {}
+[6.244713] (-) TimerEvent: {}
+[6.345709] (-) TimerEvent: {}
+[6.446271] (-) TimerEvent: {}
+[6.547218] (-) TimerEvent: {}
+[6.648019] (-) TimerEvent: {}
+[6.748677] (-) TimerEvent: {}
+[6.849374] (-) TimerEvent: {}
+[6.950468] (-) TimerEvent: {}
+[7.051194] (-) TimerEvent: {}
+[7.152212] (-) TimerEvent: {}
+[7.252679] (-) TimerEvent: {}
+[7.353239] (-) TimerEvent: {}
+[7.453883] (-) TimerEvent: {}
+[7.554318] (-) TimerEvent: {}
+[7.654938] (-) TimerEvent: {}
+[7.755758] (-) TimerEvent: {}
+[7.856183] (-) TimerEvent: {}
+[7.956810] (-) TimerEvent: {}
+[8.057910] (-) TimerEvent: {}
+[8.158453] (-) TimerEvent: {}
+[8.260123] (-) TimerEvent: {}
+[8.361316] (-) TimerEvent: {}
+[8.462020] (-) TimerEvent: {}
+[8.562992] (-) TimerEvent: {}
+[8.664091] (-) TimerEvent: {}
+[8.765042] (-) TimerEvent: {}
+[8.865857] (-) TimerEvent: {}
+[8.966591] (-) TimerEvent: {}
+[9.067346] (-) TimerEvent: {}
+[9.167881] (-) TimerEvent: {}
+[9.268580] (-) TimerEvent: {}
+[9.369069] (-) TimerEvent: {}
+[9.469533] (-) TimerEvent: {}
+[9.570188] (-) TimerEvent: {}
+[9.670772] (-) TimerEvent: {}
+[9.771412] (-) TimerEvent: {}
+[9.872091] (-) TimerEvent: {}
+[9.972861] (-) TimerEvent: {}
+[10.073567] (-) TimerEvent: {}
+[10.174469] (-) TimerEvent: {}
+[10.275113] (-) TimerEvent: {}
+[10.375663] (-) TimerEvent: {}
+[10.476495] (-) TimerEvent: {}
+[10.577192] (-) TimerEvent: {}
+[10.677819] (-) TimerEvent: {}
+[10.778646] (-) TimerEvent: {}
+[10.879496] (-) TimerEvent: {}
+[10.980257] (-) TimerEvent: {}
+[11.081095] (-) TimerEvent: {}
+[11.181872] (-) TimerEvent: {}
+[11.282756] (-) TimerEvent: {}
+[11.383819] (-) TimerEvent: {}
+[11.484705] (-) TimerEvent: {}
+[11.585482] (-) TimerEvent: {}
+[11.686356] (-) TimerEvent: {}
+[11.787228] (-) TimerEvent: {}
+[11.888312] (-) TimerEvent: {}
+[11.989095] (-) TimerEvent: {}
+[12.089807] (-) TimerEvent: {}
+[12.190700] (-) TimerEvent: {}
+[12.291471] (-) TimerEvent: {}
+[12.392211] (-) TimerEvent: {}
+[12.492970] (-) TimerEvent: {}
+[12.593721] (-) TimerEvent: {}
+[12.694320] (-) TimerEvent: {}
+[12.794960] (-) TimerEvent: {}
+[12.895655] (-) TimerEvent: {}
+[12.996685] (-) TimerEvent: {}
+[13.097328] (-) TimerEvent: {}
+[13.197988] (-) TimerEvent: {}
+[13.298734] (-) TimerEvent: {}
+[13.399419] (-) TimerEvent: {}
+[13.500177] (-) TimerEvent: {}
+[13.600980] (-) TimerEvent: {}
+[13.701760] (-) TimerEvent: {}
+[13.802506] (-) TimerEvent: {}
+[13.903052] (-) TimerEvent: {}
+[14.003830] (-) TimerEvent: {}
+[14.104581] (-) TimerEvent: {}
+[14.205339] (-) TimerEvent: {}
+[14.306122] (-) TimerEvent: {}
+[14.406833] (-) TimerEvent: {}
+[14.507611] (-) TimerEvent: {}
+[14.608228] (-) TimerEvent: {}
+[14.709020] (-) TimerEvent: {}
+[14.809838] (-) TimerEvent: {}
+[14.910426] (-) TimerEvent: {}
+[15.011052] (-) TimerEvent: {}
+[15.111908] (-) TimerEvent: {}
+[15.212800] (-) TimerEvent: {}
+[15.313516] (-) TimerEvent: {}
+[15.414195] (-) TimerEvent: {}
+[15.514867] (-) TimerEvent: {}
+[15.615636] (-) TimerEvent: {}
+[15.716553] (-) TimerEvent: {}
+[15.817364] (-) TimerEvent: {}
+[15.918132] (-) TimerEvent: {}
+[16.018895] (-) TimerEvent: {}
+[16.119694] (-) TimerEvent: {}
+[16.220536] (-) TimerEvent: {}
+[16.321335] (-) TimerEvent: {}
+[16.422127] (-) TimerEvent: {}
+[16.522930] (-) TimerEvent: {}
+[16.623622] (-) TimerEvent: {}
+[16.724581] (-) TimerEvent: {}
+[16.825304] (-) TimerEvent: {}
+[16.925913] (-) TimerEvent: {}
+[17.026545] (-) TimerEvent: {}
+[17.127247] (-) TimerEvent: {}
+[17.228326] (-) TimerEvent: {}
+[17.329073] (-) TimerEvent: {}
+[17.429565] (-) TimerEvent: {}
+[17.530206] (-) TimerEvent: {}
+[17.631242] (-) TimerEvent: {}
+[17.731829] (-) TimerEvent: {}
+[17.832504] (-) TimerEvent: {}
+[17.933009] (-) TimerEvent: {}
+[18.033721] (-) TimerEvent: {}
+[18.134589] (-) TimerEvent: {}
+[18.235412] (-) TimerEvent: {}
+[18.335964] (-) TimerEvent: {}
+[18.437096] (-) TimerEvent: {}
+[18.537713] (-) TimerEvent: {}
+[18.638123] (-) TimerEvent: {}
+[18.738726] (-) TimerEvent: {}
+[18.839342] (-) TimerEvent: {}
+[18.940075] (-) TimerEvent: {}
+[19.040590] (-) TimerEvent: {}
+[19.141006] (-) TimerEvent: {}
+[19.241654] (-) TimerEvent: {}
+[19.342430] (-) TimerEvent: {}
+[19.443074] (-) TimerEvent: {}
+[19.543903] (-) TimerEvent: {}
+[19.644690] (-) TimerEvent: {}
+[19.745351] (-) TimerEvent: {}
+[19.845814] (-) TimerEvent: {}
+[19.946350] (-) TimerEvent: {}
+[20.047190] (-) TimerEvent: {}
+[20.147793] (-) TimerEvent: {}
+[20.248488] (-) TimerEvent: {}
+[20.349272] (-) TimerEvent: {}
+[20.450010] (-) TimerEvent: {}
+[20.550640] (-) TimerEvent: {}
+[20.651307] (-) TimerEvent: {}
+[20.751919] (-) TimerEvent: {}
+[20.852566] (-) TimerEvent: {}
+[20.953055] (-) TimerEvent: {}
+[21.053687] (-) TimerEvent: {}
+[21.154275] (-) TimerEvent: {}
+[21.254985] (-) TimerEvent: {}
+[21.355741] (-) TimerEvent: {}
+[21.456458] (-) TimerEvent: {}
+[21.557025] (-) TimerEvent: {}
+[21.657893] (-) TimerEvent: {}
+[21.758687] (-) TimerEvent: {}
+[21.859417] (-) TimerEvent: {}
+[21.960005] (-) TimerEvent: {}
+[22.060703] (-) TimerEvent: {}
+[22.161418] (-) TimerEvent: {}
+[22.262257] (-) TimerEvent: {}
+[22.362958] (-) TimerEvent: {}
+[22.463876] (-) TimerEvent: {}
+[22.564399] (-) TimerEvent: {}
+[22.665206] (-) TimerEvent: {}
+[22.765961] (-) TimerEvent: {}
+[22.866770] (-) TimerEvent: {}
+[22.967600] (-) TimerEvent: {}
+[23.068477] (-) TimerEvent: {}
+[23.169220] (-) TimerEvent: {}
+[23.270213] (-) TimerEvent: {}
+[23.371015] (-) TimerEvent: {}
+[23.471955] (-) TimerEvent: {}
+[23.572792] (-) TimerEvent: {}
+[23.673680] (-) TimerEvent: {}
+[23.774673] (-) TimerEvent: {}
+[23.875493] (-) TimerEvent: {}
+[23.976107] (-) TimerEvent: {}
+[24.076645] (-) TimerEvent: {}
+[24.177204] (-) TimerEvent: {}
+[24.277873] (-) TimerEvent: {}
+[24.378426] (-) TimerEvent: {}
+[24.479002] (-) TimerEvent: {}
+[24.579657] (-) TimerEvent: {}
+[24.680370] (-) TimerEvent: {}
+[24.781245] (-) TimerEvent: {}
+[24.881802] (-) TimerEvent: {}
+[24.982360] (-) TimerEvent: {}
+[25.082971] (-) TimerEvent: {}
+[25.183599] (-) TimerEvent: {}
+[25.284093] (-) TimerEvent: {}
+[25.384746] (-) TimerEvent: {}
+[25.485501] (-) TimerEvent: {}
+[25.586208] (-) TimerEvent: {}
+[25.686985] (-) TimerEvent: {}
+[25.787748] (-) TimerEvent: {}
+[25.888466] (-) TimerEvent: {}
+[25.989023] (-) TimerEvent: {}
+[26.089665] (-) TimerEvent: {}
+[26.190355] (-) TimerEvent: {}
+[26.291163] (-) TimerEvent: {}
+[26.391746] (-) TimerEvent: {}
+[26.492341] (-) TimerEvent: {}
+[26.593257] (-) TimerEvent: {}
+[26.694132] (-) TimerEvent: {}
+[26.794880] (-) TimerEvent: {}
+[26.895738] (-) TimerEvent: {}
+[26.996360] (-) TimerEvent: {}
+[27.097189] (-) TimerEvent: {}
+[27.198170] (-) TimerEvent: {}
+[27.298806] (-) TimerEvent: {}
+[27.399458] (-) TimerEvent: {}
+[27.500082] (-) TimerEvent: {}
+[27.601022] (-) TimerEvent: {}
+[27.701767] (-) TimerEvent: {}
+[27.802342] (-) TimerEvent: {}
+[27.902928] (-) TimerEvent: {}
+[28.003785] (-) TimerEvent: {}
+[28.104462] (-) TimerEvent: {}
+[28.205269] (-) TimerEvent: {}
+[28.305870] (-) TimerEvent: {}
+[28.406499] (-) TimerEvent: {}
+[28.507297] (-) TimerEvent: {}
+[28.607898] (-) TimerEvent: {}
+[28.708687] (-) TimerEvent: {}
+[28.809600] (-) TimerEvent: {}
+[28.910495] (-) TimerEvent: {}
+[29.011472] (-) TimerEvent: {}
+[29.112183] (-) TimerEvent: {}
+[29.212795] (-) TimerEvent: {}
+[29.313493] (-) TimerEvent: {}
+[29.414345] (-) TimerEvent: {}
+[29.515097] (-) TimerEvent: {}
+[29.615799] (-) TimerEvent: {}
+[29.716630] (-) TimerEvent: {}
+[29.817400] (-) TimerEvent: {}
+[29.918186] (-) TimerEvent: {}
+[30.018846] (-) TimerEvent: {}
+[30.119792] (-) TimerEvent: {}
+[30.220331] (-) TimerEvent: {}
+[30.321092] (-) TimerEvent: {}
+[30.421983] (-) TimerEvent: {}
+[30.522794] (-) TimerEvent: {}
+[30.623405] (-) TimerEvent: {}
+[30.723869] (-) TimerEvent: {}
+[30.824481] (-) TimerEvent: {}
+[30.925157] (-) TimerEvent: {}
+[31.025699] (-) TimerEvent: {}
+[31.126354] (-) TimerEvent: {}
+[31.226896] (-) TimerEvent: {}
+[31.327665] (-) TimerEvent: {}
+[31.428536] (-) TimerEvent: {}
+[31.529351] (-) TimerEvent: {}
+[31.630238] (-) TimerEvent: {}
+[31.730934] (-) TimerEvent: {}
+[31.831736] (-) TimerEvent: {}
+[31.932565] (-) TimerEvent: {}
+[32.033373] (-) TimerEvent: {}
+[32.133991] (-) TimerEvent: {}
+[32.234708] (-) TimerEvent: {}
+[32.335556] (-) TimerEvent: {}
+[32.435959] (-) TimerEvent: {}
+[32.536460] (-) TimerEvent: {}
+[32.637097] (-) TimerEvent: {}
+[32.737707] (-) TimerEvent: {}
+[32.838710] (-) TimerEvent: {}
+[32.939388] (-) TimerEvent: {}
+[33.039916] (-) TimerEvent: {}
+[33.140617] (-) TimerEvent: {}
+[33.241267] (-) TimerEvent: {}
+[33.342003] (-) TimerEvent: {}
+[33.442622] (-) TimerEvent: {}
+[33.543353] (-) TimerEvent: {}
+[33.644334] (-) TimerEvent: {}
+[33.745030] (-) TimerEvent: {}
+[33.845999] (-) TimerEvent: {}
+[33.946779] (-) TimerEvent: {}
+[34.047674] (-) TimerEvent: {}
+[34.148597] (-) TimerEvent: {}
+[34.249343] (-) TimerEvent: {}
+[34.350041] (-) TimerEvent: {}
+[34.450531] (-) TimerEvent: {}
+[34.551301] (-) TimerEvent: {}
+[34.652032] (-) TimerEvent: {}
+[34.752754] (-) TimerEvent: {}
+[34.853357] (-) TimerEvent: {}
+[34.953958] (-) TimerEvent: {}
+[35.054983] (-) TimerEvent: {}
+[35.155540] (-) TimerEvent: {}
+[35.256122] (-) TimerEvent: {}
+[35.356769] (-) TimerEvent: {}
+[35.457281] (-) TimerEvent: {}
+[35.558001] (-) TimerEvent: {}
+[35.658692] (-) TimerEvent: {}
+[35.759580] (-) TimerEvent: {}
+[35.860341] (-) TimerEvent: {}
+[35.961128] (-) TimerEvent: {}
+[36.061850] (-) TimerEvent: {}
+[36.162539] (-) TimerEvent: {}
+[36.263065] (-) TimerEvent: {}
+[36.363621] (-) TimerEvent: {}
+[36.464234] (-) TimerEvent: {}
+[36.564701] (-) TimerEvent: {}
+[36.665125] (-) TimerEvent: {}
+[36.765804] (-) TimerEvent: {}
+[36.866641] (-) TimerEvent: {}
+[36.967402] (-) TimerEvent: {}
+[37.068070] (-) TimerEvent: {}
+[37.168870] (-) TimerEvent: {}
+[37.269655] (-) TimerEvent: {}
+[37.370409] (-) TimerEvent: {}
+[37.471230] (-) TimerEvent: {}
+[37.571721] (-) TimerEvent: {}
+[37.672329] (-) TimerEvent: {}
+[37.773093] (-) TimerEvent: {}
+[37.873715] (-) TimerEvent: {}
+[37.974683] (-) TimerEvent: {}
+[38.075343] (-) TimerEvent: {}
+[38.176171] (-) TimerEvent: {}
+[38.276956] (-) TimerEvent: {}
+[38.377751] (-) TimerEvent: {}
+[38.478491] (-) TimerEvent: {}
+[38.579230] (-) TimerEvent: {}
+[38.680049] (-) TimerEvent: {}
+[38.780802] (-) TimerEvent: {}
+[38.881454] (-) TimerEvent: {}
+[38.982283] (-) TimerEvent: {}
+[39.083041] (-) TimerEvent: {}
+[39.183798] (-) TimerEvent: {}
+[39.284495] (-) TimerEvent: {}
+[39.385215] (-) TimerEvent: {}
+[39.485912] (-) TimerEvent: {}
+[39.586836] (-) TimerEvent: {}
+[39.687400] (-) TimerEvent: {}
+[39.788824] (-) TimerEvent: {}
+[39.889495] (-) TimerEvent: {}
+[39.990190] (-) TimerEvent: {}
+[40.090794] (-) TimerEvent: {}
+[40.191573] (-) TimerEvent: {}
+[40.292629] (-) TimerEvent: {}
+[40.393346] (-) TimerEvent: {}
+[40.494261] (-) TimerEvent: {}
+[40.595282] (-) TimerEvent: {}
+[40.695963] (-) TimerEvent: {}
+[40.796809] (-) TimerEvent: {}
+[40.897500] (-) TimerEvent: {}
+[40.998594] (-) TimerEvent: {}
+[41.099433] (-) TimerEvent: {}
+[41.199912] (-) TimerEvent: {}
+[41.300362] (-) TimerEvent: {}
+[41.401033] (-) TimerEvent: {}
+[41.446257] (flight_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable landing_test_vel\x1b[0m\n'}
+[41.501222] (-) TimerEvent: {}
+[41.601914] (-) TimerEvent: {}
+[41.702768] (-) TimerEvent: {}
+[41.803373] (-) TimerEvent: {}
+[41.904261] (-) TimerEvent: {}
+[42.005069] (-) TimerEvent: {}
+[42.105921] (-) TimerEvent: {}
+[42.206810] (-) TimerEvent: {}
+[42.307367] (-) TimerEvent: {}
+[42.407987] (-) TimerEvent: {}
+[42.508775] (-) TimerEvent: {}
+[42.609626] (-) TimerEvent: {}
+[42.710484] (-) TimerEvent: {}
+[42.811081] (-) TimerEvent: {}
+[42.911803] (-) TimerEvent: {}
+[43.012513] (-) TimerEvent: {}
+[43.113126] (-) TimerEvent: {}
+[43.214096] (-) TimerEvent: {}
+[43.314744] (-) TimerEvent: {}
+[43.415428] (-) TimerEvent: {}
+[43.515921] (-) TimerEvent: {}
+[43.525230] (flight_control) StdoutLine: {'line': b'[100%] Built target landing_test_vel\n'}
+[43.554685] (flight_control) CommandEnded: {'returncode': 0}
+[43.557038] (flight_control) JobProgress: {'identifier': 'flight_control', 'progress': 'install'}
+[43.573269] (flight_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ldy/space_y/ws_KRAC/build/flight_control'], 'cwd': '/home/ldy/space_y/ws_KRAC/build/flight_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ldy'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ldy/ros2_px4_ws/install/px4_ros_com/lib:/home/ldy/ros2_px4_ws/install/px4_msgs/lib:/home/ldy/ros2_px4_ws/install/microxrcedds_agent/lib:/home/ldy/px4_ros_ws/install/px4_ros_com/lib:/home/ldy/px4_ros_ws/install/px4_msgs/lib:/home/ldy/px4_ros_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ldy'), ('OLDPWD', '/home/ldy/space_y/ws_KRAC'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1803'), ('SYSTEMD_EXEC_PID', '1979'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11729'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ldy/px4_ros_ws/install:/home/ldy/space_y/ws_KRAC/install:/home/ldy/ros2_px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ldy'), ('JOURNAL_STREAM', '8:30885'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ldy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ldy/ros2_px4_ws/install/microxrcedds_agent/bin:/home/ldy/px4_ros_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/ldy/.local/bin:/home/ldy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/victus:@/tmp/.ICE-unix/1952,unix/victus:/tmp/.ICE-unix/1952'), ('INVOCATION_ID', '0ff3626040fb4ea694a371bac9c16ae9'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JZE7V3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:fb400dc3-2d18-4e58-a4d6-82f301300ee0'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ldy/space_y/ws_KRAC/build/flight_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ldy/space_y/ws_KRAC/build/launch_package:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/imagery_processing:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/ros2_px4_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/ros2_px4_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/ros2_px4_ws/install/microxrcedds_agent:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/microxrcedds_agent:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/imagery_processing:/opt/ros/humble')]), 'shell': False}
+[43.593843] (flight_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[43.596041] (flight_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[43.596802] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test\n'}
+[43.597493] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_vel\n'}
+[43.597824] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_flight\n'}
+[43.598439] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/package_run_dependencies/flight_control\n'}
+[43.599032] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/parent_prefix_path/flight_control\n'}
+[43.599451] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.sh\n'}
+[43.599775] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.dsv\n'}
+[43.600070] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.sh\n'}
+[43.600427] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.dsv\n'}
+[43.600725] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.bash\n'}
+[43.601073] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.sh\n'}
+[43.601445] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.zsh\n'}
+[43.601812] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.dsv\n'}
+[43.602121] (flight_control) StdoutLine: {'line': b'-- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.dsv\n'}
+[43.616177] (-) TimerEvent: {}
+[43.627616] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/packages/flight_control\n'}
+[43.628846] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig.cmake\n'}
+[43.629124] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig-version.cmake\n'}
+[43.629311] (flight_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.xml\n'}
+[43.633281] (flight_control) CommandEnded: {'returncode': 0}
+[43.670937] (flight_control) JobEnded: {'identifier': 'flight_control', 'rc': 0}
+[43.673336] (launch_package) JobStarted: {'identifier': 'launch_package'}
+[43.716300] (-) TimerEvent: {}
+[43.816933] (-) TimerEvent: {}
+[43.917577] (-) TimerEvent: {}
+[44.018262] (-) TimerEvent: {}
+[44.119031] (-) TimerEvent: {}
+[44.219772] (-) TimerEvent: {}
+[44.320557] (-) TimerEvent: {}
+[44.421317] (-) TimerEvent: {}
+[44.522008] (-) TimerEvent: {}
+[44.622806] (-) TimerEvent: {}
+[44.723428] (-) TimerEvent: {}
+[44.824122] (-) TimerEvent: {}
+[44.924762] (-) TimerEvent: {}
+[45.025548] (-) TimerEvent: {}
+[45.126305] (-) TimerEvent: {}
+[45.227191] (-) TimerEvent: {}
+[45.327764] (-) TimerEvent: {}
+[45.428551] (-) TimerEvent: {}
+[45.529372] (-) TimerEvent: {}
+[45.630211] (-) TimerEvent: {}
+[45.730900] (-) TimerEvent: {}
+[45.831702] (-) TimerEvent: {}
+[45.932240] (-) TimerEvent: {}
+[46.032799] (-) TimerEvent: {}
+[46.133361] (-) TimerEvent: {}
+[46.233926] (-) TimerEvent: {}
+[46.334486] (-) TimerEvent: {}
+[46.362992] (launch_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ldy/space_y/ws_KRAC/build/launch_package/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ldy/space_y/ws_KRAC/build/launch_package', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ldy'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ldy/ros2_px4_ws/install/px4_ros_com/lib:/home/ldy/ros2_px4_ws/install/px4_msgs/lib:/home/ldy/ros2_px4_ws/install/microxrcedds_agent/lib:/home/ldy/px4_ros_ws/install/px4_ros_com/lib:/home/ldy/px4_ros_ws/install/px4_msgs/lib:/home/ldy/px4_ros_ws/install/microxrcedds_agent/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ldy'), ('OLDPWD', '/home/ldy/space_y/ws_KRAC'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1803'), ('SYSTEMD_EXEC_PID', '1979'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11729'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/ldy/px4_ros_ws/install:/home/ldy/space_y/ws_KRAC/install:/home/ldy/ros2_px4_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ldy'), ('JOURNAL_STREAM', '8:30885'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ldy'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ldy/ros2_px4_ws/install/microxrcedds_agent/bin:/home/ldy/px4_ros_ws/install/microxrcedds_agent/bin:/opt/ros/humble/bin:/home/ldy/.local/bin:/home/ldy/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/victus:@/tmp/.ICE-unix/1952,unix/victus:/tmp/.ICE-unix/1952'), ('INVOCATION_ID', '0ff3626040fb4ea694a371bac9c16ae9'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.JZE7V3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/imagery_processing:/home/ldy/space_y/ws_KRAC/install/launch_package:/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:fb400dc3-2d18-4e58-a4d6-82f301300ee0'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ldy/space_y/ws_KRAC/build/launch_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ldy/space_y/ws_KRAC/build/launch_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/imagery_processing:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:/home/ldy/space_y/ws_KRAC/build/launch_package:/home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages:/home/ldy/ros2_px4_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/ros2_px4_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/ldy/px4_ros_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ldy/space_y/ws_KRAC/install/flight_control:/home/ldy/ros2_px4_ws/install/px4_ros_com:/home/ldy/ros2_px4_ws/install/px4_msgs:/home/ldy/ros2_px4_ws/install/microxrcedds_agent:/home/ldy/px4_ros_ws/install/px4_ros_com:/home/ldy/px4_ros_ws/install/px4_msgs:/home/ldy/px4_ros_ws/install/microxrcedds_agent')]), 'shell': False}
+[46.434657] (-) TimerEvent: {}
+[46.535217] (-) TimerEvent: {}
+[46.635796] (-) TimerEvent: {}
+[46.736508] (-) TimerEvent: {}
+[46.836956] (-) TimerEvent: {}
+[46.937607] (-) TimerEvent: {}
+[47.038333] (-) TimerEvent: {}
+[47.117039] (launch_package) StdoutLine: {'line': b'running develop\n'}
+[47.138461] (-) TimerEvent: {}
+[47.238985] (-) TimerEvent: {}
+[47.339561] (-) TimerEvent: {}
+[47.440098] (-) TimerEvent: {}
+[47.540642] (-) TimerEvent: {}
+[47.619796] (launch_package) StdoutLine: {'line': b'running egg_info\n'}
+[47.621658] (launch_package) StdoutLine: {'line': b'writing launch_package.egg-info/PKG-INFO\n'}
+[47.622500] (launch_package) StdoutLine: {'line': b'writing dependency_links to launch_package.egg-info/dependency_links.txt\n'}
+[47.622822] (launch_package) StdoutLine: {'line': b'writing entry points to launch_package.egg-info/entry_points.txt\n'}
+[47.623072] (launch_package) StdoutLine: {'line': b'writing requirements to launch_package.egg-info/requires.txt\n'}
+[47.623358] (launch_package) StdoutLine: {'line': b'writing top-level names to launch_package.egg-info/top_level.txt\n'}
+[47.627406] (launch_package) StdoutLine: {'line': b"reading manifest file 'launch_package.egg-info/SOURCES.txt'\n"}
+[47.629329] (launch_package) StdoutLine: {'line': b"writing manifest file 'launch_package.egg-info/SOURCES.txt'\n"}
+[47.632941] (launch_package) StdoutLine: {'line': b'running build_ext\n'}
+[47.633483] (launch_package) StdoutLine: {'line': b'Creating /home/ldy/space_y/ws_KRAC/install/launch_package/lib/python3.10/site-packages/launch-package.egg-link (link to .)\n'}
+[47.635630] (launch_package) StdoutLine: {'line': b'\n'}
+[47.635993] (launch_package) StdoutLine: {'line': b'Installed /home/ldy/space_y/ws_KRAC/build/launch_package\n'}
+[47.636186] (launch_package) StdoutLine: {'line': b'running symlink_data\n'}
+[47.640753] (-) TimerEvent: {}
+[47.711006] (launch_package) CommandEnded: {'returncode': 0}
+[47.734256] (launch_package) JobEnded: {'identifier': 'launch_package', 'rc': 0}
+[47.737283] (-) EventReactorShutdown: {}

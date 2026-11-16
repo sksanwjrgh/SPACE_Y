@@ -1,0 +1,17 @@
+[1.129s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build --no-deps symlink_data
+[1.449s] running develop
+[1.638s] running egg_info
+[1.639s] writing imagery_processing.egg-info/PKG-INFO
+[1.639s] writing dependency_links to imagery_processing.egg-info/dependency_links.txt
+[1.639s] writing entry points to imagery_processing.egg-info/entry_points.txt
+[1.639s] writing requirements to imagery_processing.egg-info/requires.txt
+[1.639s] writing top-level names to imagery_processing.egg-info/top_level.txt
+[1.641s] reading manifest file 'imagery_processing.egg-info/SOURCES.txt'
+[1.642s] writing manifest file 'imagery_processing.egg-info/SOURCES.txt'
+[1.644s] running build_ext
+[1.644s] Creating /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages/imagery-processing.egg-link (link to .)
+[1.645s] Installing marker_recognition script to /home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/imagery_processing
+[1.645s] 
+[1.645s] Installed /home/ldy/space_y/ws_KRAC/build/imagery_processing
+[1.645s] running symlink_data
+[1.680s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/imagery_processing' returned '0': PYTHONPATH=/home/ldy/space_y/ws_KRAC/build/imagery_processing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldy/space_y/ws_KRAC/install/imagery_processing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ldy/space_y/ws_KRAC/build/imagery_processing/build --no-deps symlink_data

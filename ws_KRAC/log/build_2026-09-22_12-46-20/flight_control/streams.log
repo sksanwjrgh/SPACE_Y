@@ -1,0 +1,33 @@
+[0.010s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[0.053s] [ 16%] [32mBuilding CXX object CMakeFiles/landing_test_flight.dir/src/landing_test_flight.cpp.o[0m
+[0.054s] [ 33%] [32mBuilding CXX object CMakeFiles/landing_test_vel.dir/src/landing_test_vel.cpp.o[0m
+[0.054s] [ 50%] [32mBuilding CXX object CMakeFiles/landing_test.dir/src/landing_test.cpp.o[0m
+[9.529s] [ 66%] [32m[1mLinking CXX executable landing_test_flight[0m
+[9.540s] [ 83%] [32m[1mLinking CXX executable landing_test_vel[0m
+[9.732s] [100%] [32m[1mLinking CXX executable landing_test[0m
+[10.120s] [100%] Built target landing_test_flight
+[10.131s] [100%] Built target landing_test_vel
+[10.277s] [100%] Built target landing_test
+[10.285s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ldy/space_y/ws_KRAC/build/flight_control -- -j28 -l28
+[10.296s] Invoking command in '/home/ldy/space_y/ws_KRAC/build/flight_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ldy/space_y/ws_KRAC/build/flight_control
+[10.305s] -- Install configuration: ""
+[10.305s] -- Execute custom install script
+[10.306s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test
+[10.311s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_vel
+[10.319s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/lib/flight_control/landing_test_flight
+[10.330s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/package_run_dependencies/flight_control
+[10.341s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/parent_prefix_path/flight_control
+[10.354s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.sh
+[10.371s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/ament_prefix_path.dsv
+[10.388s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.sh
+[10.400s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/environment/path.dsv
+[10.406s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.bash
+[10.413s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.sh
+[10.420s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.zsh
+[10.428s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/local_setup.dsv
+[10.434s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.dsv
+[10.442s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/ament_index/resource_index/packages/flight_control
+[10.449s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig.cmake
+[10.460s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/cmake/flight_controlConfig-version.cmake
+[10.479s] -- Symlinking: /home/ldy/space_y/ws_KRAC/install/flight_control/share/flight_control/package.xml
+[10.500s] Invoked command in '/home/ldy/space_y/ws_KRAC/build/flight_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ldy/space_y/ws_KRAC/build/flight_control

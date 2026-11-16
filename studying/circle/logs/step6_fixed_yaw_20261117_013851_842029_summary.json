@@ -1,0 +1,81 @@
+{
+  "completed": true,
+  "final_state": "DONE",
+  "failure": "",
+  "duration_s": 136.902,
+  "samples": 2738,
+  "phases": [
+    {
+      "state": "WAIT",
+      "elapsed_s": 0.051
+    },
+    {
+      "state": "PREPARE_OFFBOARD",
+      "elapsed_s": 2.102
+    },
+    {
+      "state": "OFFBOARD",
+      "elapsed_s": 4.152
+    },
+    {
+      "state": "ARM",
+      "elapsed_s": 4.202
+    },
+    {
+      "state": "TAKEOFF",
+      "elapsed_s": 4.302
+    },
+    {
+      "state": "HOVER",
+      "elapsed_s": 18.302
+    },
+    {
+      "state": "FORWARD",
+      "elapsed_s": 23.401
+    },
+    {
+      "state": "TURN_INWARD",
+      "elapsed_s": 40.502
+    },
+    {
+      "state": "ORBIT",
+      "elapsed_s": 54.552
+    },
+    {
+      "state": "ORBIT_SETTLE",
+      "elapsed_s": 107.852
+    },
+    {
+      "state": "RETURN",
+      "elapsed_s": 109.952
+    },
+    {
+      "state": "LAND",
+      "elapsed_s": 127.002
+    },
+    {
+      "state": "DONE",
+      "elapsed_s": 136.902
+    }
+  ],
+  "direction": "clockwise",
+  "target_turns": 1.0,
+  "actual_turns": 1.0017310427029615,
+  "signed_actual_turns": 1.0017310427029615,
+  "radius_mean_m": 3.9933535657234454,
+  "max_abs_radial_error_m": 0.048964026154448614,
+  "radial_error_rms_m": 0.018320486430994168,
+  "orbit_altitude_min_mean_max_m": [
+    3.981952205300331,
+    4.000427204617955,
+    4.018696561455727
+  ],
+  "target_position_error_mean_m": 0.47851401304776003,
+  "target_position_error_max_m": 0.5714334179046423,
+  "max_abs_yaw_error_deg": 0.08488463772036735,
+  "max_abs_inward_yaw_error_deg": 179.9188480733895,
+  "yaw_error_rms_deg": 0.032589329481432755,
+  "cruise_heading_frd_vx_mean_m_s": -0.003910223413821492,
+  "cruise_heading_frd_vy_mean_m_s": 0.0487597411256385,
+  "max_control_gap_s": 0.051497
+}

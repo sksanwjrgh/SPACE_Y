@@ -1,0 +1,1 @@
+/home/ldy/space_y/ws_KRAC/build/flight_control/ament_cmake_core/flight_controlConfig-version.cmake
